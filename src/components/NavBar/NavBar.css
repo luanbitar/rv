@@ -1,5 +1,5 @@
 :local(.container) {
-  height: 134px;
+  height: 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -7,13 +7,31 @@
 }
 :local(.menu) {
   display: flex;
+  list-style: none;
+  margin: 0;
+  height: 100%;
+  align-items: center;
+  padding: 0;
 }
 :local(.option) {
   color: var(--grey);
   margin-left: 40px;
   padding-bottom: 4px;
+  cursor: pointer;
+  letter-spacing: 0.89px;
+  flex-shrink: 0;
 }
 :local(.active) {
   color: var(--blue);
   border-bottom: 2px solid var(--red);
+}
+
+@media (max-width: 900px) {
+  :local(.container) {
+    padding: 0 20px;
+    height: 70px;
+  }
+  :local(.menu) {
+    overflow-x: scroll;
+  }
 }

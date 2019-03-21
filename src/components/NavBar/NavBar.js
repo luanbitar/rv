@@ -4,24 +4,26 @@ import s from './NavBar.css'
 
 const NavBar = () => (
   <div className={s.container}>
-    <img src={RVLogo} alt="Red Ventures logo" />
-    <div className={s.menu}>
-      <div className={[s.option, s.active].join(' ')}>
-        <span>Model R</span>
-      </div>
-      <div className={s.option}>
-        <span>Model IQ</span>
-      </div>
-      <div className={s.option}>
-        <span>Model MOBI</span>
-      </div>
-      <div className={s.option}>
-        <span>Model Charlie</span>
-      </div>
-      <div className={s.option}>
-        <span>Model Italy</span>
-      </div>
-    </div>
+    <a href="https://www.redventures.com/">
+      <img src={RVLogo} alt="Red Ventures logo" />
+    </a>
+    <ul className={s.menu}>
+      <li className={[s.option, s.active].join(' ')}>
+        Model R
+      </li>
+      <li className={s.option}>
+        Model IQ
+      </li>
+      <li className={s.option}>
+        Model Mobi
+      </li>
+      <li className={s.option}>
+        Model Charlie
+      </li>
+      <li className={s.option}>
+        Model Italy
+      </li>
+    </ul>
   </div>
 )
 

@@ -1,0 +1,18 @@
+:local(.container) {
+  border-bottom: 2px solid var(--red);
+}
+
+:local(.container) h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--red);
+  font-weight: 500;
+  line-height: 1rem;
+}
+:local(.container) h1 span {
+  font-size: 1rem;
+}
+
+:local(.container) p {
+  margin: 0;
+}

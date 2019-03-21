@@ -4,17 +4,38 @@
   --grey: #A8A8A8;
 }
 
+@font-face {
+  font-family: 'Saira Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Saira Condensed Light'), local('SairaCondensed-Light'),
+       url('fonts/Saira_Condensed/SairaCondensed-Light.ttf') format('truetype') /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: 'Saira Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Saira Condensed Regular'), local('SairaCondensed-Regular'),
+       url('fonts/Saira_Condensed/SairaCondensed-Regular.ttf') format('truetype') /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: 'Saira Condensed';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Saira Condensed Medium'), local('SairaCondensed-Medium'),
+       url('fonts/Saira_Condensed/SairaCondensed-Medium.ttf') format('truetype') /* Safari, Android, iOS */
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Saira Condensed',  'Helvetica Neue';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.main--container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
