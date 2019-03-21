@@ -1,8 +1,8 @@
 import React from 'react'
-import './App.css'
+import Router from './Router'
 
 const App = () => (
-  <h1>React app</h1>
+  <Router />
 )
 
 export default App

@@ -1,0 +1,19 @@
+:local(.container) {
+  height: 134px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 98px;
+}
+:local(.menu) {
+  display: flex;
+}
+:local(.option) {
+  color: var(--grey);
+  margin-left: 40px;
+  padding-bottom: 4px;
+}
+:local(.active) {
+  color: var(--blue);
+  border-bottom: 2px solid var(--red);
+}
