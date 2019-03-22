@@ -34,8 +34,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.switch-wrapper {
+  position: relative;
+}
+
+.switch-wrapper > div {
+  position: absolute;
+  display: flex;
+  flex: 1;
+  width: 100%;
+  justify-content: center;
+}
+
 .main--container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  flex: 1;
 }
+
