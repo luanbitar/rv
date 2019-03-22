@@ -1,4 +1,12 @@
 :local(.container) {
-  background: red;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+:local(.section) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex: 1;
 }
