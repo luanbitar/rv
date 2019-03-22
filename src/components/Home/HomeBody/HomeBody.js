@@ -12,7 +12,7 @@ const HomeBody = () => (
     </div>
     <img className={s.carImage} src={CarImage} alt="Car red" />
     <div  className={s.btn}>
-      <NextButton to="/others">
+      <NextButton to="/engine">
         <span className={s.advance}>Begin</span>
       </NextButton>
     </div>

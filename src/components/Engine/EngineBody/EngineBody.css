@@ -1,0 +1,4 @@
+:local(.container) {
+  background: red;
+  flex: 1;
+}
