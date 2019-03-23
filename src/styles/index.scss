@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 :root {
   --red: #AB1725;
   --blue: #0F1C2D;
@@ -9,21 +11,21 @@
   font-style: normal;
   font-weight: 300;
   src: local('Saira Condensed Light'), local('SairaCondensed-Light'),
-       url('fonts/Saira_Condensed/SairaCondensed-Light.ttf') format('truetype') /* Safari, Android, iOS */
+       url('../fonts/Saira_Condensed/SairaCondensed-Light.ttf') format('truetype') /* Safari, Android, iOS */
 }
 @font-face {
   font-family: 'Saira Condensed';
   font-style: normal;
   font-weight: 400;
   src: local('Saira Condensed Regular'), local('SairaCondensed-Regular'),
-       url('fonts/Saira_Condensed/SairaCondensed-Regular.ttf') format('truetype') /* Safari, Android, iOS */
+       url('../fonts/Saira_Condensed/SairaCondensed-Regular.ttf') format('truetype') /* Safari, Android, iOS */
 }
 @font-face {
   font-family: 'Saira Condensed';
   font-style: normal;
   font-weight: 500;
   src: local('Saira Condensed Medium'), local('SairaCondensed-Medium'),
-       url('fonts/Saira_Condensed/SairaCondensed-Medium.ttf') format('truetype') /* Safari, Android, iOS */
+       url('../fonts/Saira_Condensed/SairaCondensed-Medium.ttf') format('truetype') /* Safari, Android, iOS */
 }
 
 body {
