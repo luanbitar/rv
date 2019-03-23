@@ -1,0 +1,19 @@
+@import "styles/mixins.scss";
+
+:local(.container) {
+  border-bottom: 2px solid $red;
+
+  .value {
+    font-size: 2rem;
+    color: $red;
+    font-weight: 500;
+    line-height: 1rem;
+    .unit {
+      font-size: 1rem;
+    }
+  }
+  
+  .description, .value {
+    margin: 0;
+  }
+}

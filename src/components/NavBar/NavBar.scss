@@ -1,20 +1,24 @@
-@import "styles/variables.scss";
 @import "styles/mixins.scss";
 
 :local(.container) {
   height: 120px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
   padding: 0 98px;
+  @include mq(mobile) {
+    padding: 0 20px;
+    height: 70px;
+  }
 
   .limitWidthContainer {
-    @include flex;
+    @include flex1;
     max-width: 1200px;
     justify-content: space-between;
     height: 100%;
     align-items: center;
-
+    @include mq(mobile) {
+      max-width: 90vw;
+    }
     .menu {
       display: flex;
       list-style: none;
@@ -22,7 +26,13 @@
       height: 100%;
       align-items: center;
       padding: 0;
-
+      @include mq(mobile) {
+        overflow-x: scroll;
+        margin-left: 20px;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
       .option {
         color: $grey;
         margin-left: 40px;
@@ -30,31 +40,14 @@
         cursor: pointer;
         letter-spacing: 0.89px;
         flex-shrink: 0;
-        a {
-          text-decoration: none;
-          color: inherit;
-        }
         &.active {
           color: $blue;
           border-bottom: 2px solid $red;
         }
-      }
-    }
-  }
-}
-
-@media (max-width: $mq-mobile) {
-  :local(.container) {
-    padding: 0 20px;
-    height: 70px;
-    .limitWidthContainer {
-      max-width: 90vw;
-    }
-    .menu {
-      overflow-x: scroll;
-      margin-left: 20px;
-      &::-webkit-scrollbar {
-        display: none;
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
       }
     }
   }

@@ -1,0 +1,11 @@
+@import "styles/mixins.scss";
+
+:local(.container) {
+  @include flex1;
+  flex-direction: row;
+  
+  .section {
+    @include flex1;
+    @include flex-center;
+  }
+}

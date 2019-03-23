@@ -1,6 +1,6 @@
 import React from 'react'
 
-import s from './Footer.css'
+import s from './Footer.scss'
 
 const Footer = () => (
   <div className={s.container}>

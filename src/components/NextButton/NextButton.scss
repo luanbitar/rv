@@ -1,0 +1,14 @@
+@import "styles/variables.scss";
+
+:local(.container) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $blue;
+  padding: 15px;
+  min-width: 120px;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
