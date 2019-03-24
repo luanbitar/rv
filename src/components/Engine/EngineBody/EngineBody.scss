@@ -1,11 +1,60 @@
 @import "styles/mixins.scss";
 
 :local(.container) {
-  @include flex1;
   flex-direction: row;
-  
+  flex: 1;
+  .limit-container {
+    @include mq(mobile) {
+      flex-direction: column;
+    }
+  }
+
   .section {
     @include flex1;
-    @include flex-center;
+    justify-content: center;
+    align-items: flex-start;
+
+    &.car-section {
+      @include mq(mobile) {
+        max-height: 200px;
+        padding-top: 2rem;
+        align-items: center;
+      }
+    }
+    &.radio-section {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      box-sizing: border-box;
+      max-width: 50vw;
+      @include mq(mobile) {
+        max-width: unset;
+        height: unset;
+      }
+  
+      .title {
+        color: $blue;
+        font-weight: 300;
+        font-size: 3rem;
+        width: 100%;
+        margin: 0;
+        padding: 5rem 0 3rem 0;
+        @include mq(mobile) {
+          font-size: 2rem;
+          position: absolute;
+          padding: 0;
+          top: 4rem;
+          left: 4vw;
+          width: unset;
+        }
+      }
+    }
+
+    .car-image {
+      @include mq(mobile) {
+        transform: rotate(-90deg);
+        height: 375px;
+      }
+    }
   }
 }

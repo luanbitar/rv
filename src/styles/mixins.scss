@@ -21,3 +21,20 @@
   justify-content: center;
   align-items: center;
 }
+
+.parent__limit-container {
+  display: flex;
+  @include flex-center;
+  padding: 0 98px;
+  @include mq(mobile) {
+    padding: 0 20px;
+  }
+  .limit-container {
+    @include flex1;
+    max-width: 1200px;
+    height: 100%;
+    @include mq(mobile) {
+      max-width: 90vw;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import "styles/mixins.scss";
+
+$color-size: 20px;
+$height: 4.5rem;
+
+:local(.container) {
+  background: $select-bg;
+  @include flex1;
+  align-items: center;
+  justify-content: space-around;
+  max-height: $height;
+  min-height: $height;
+  margin-bottom: 3rem;
+  .content {
+    margin: 0;
+    color: $blue;
+    letter-spacing: 1px;
+    font-size: 20px;
+
+    .unit {
+      color: $grey;
+      margin-left: 2px;
+      font-weight: 500;
+    }
+    
+    &.type {
+      font-weight: 300;
+      font-size: 28px;
+      .type-symbol {
+        color: $red;
+        font-weight: 500;
+      }
+    }
+  }
+  .color {
+    width: $color-size;
+    height: $color-size;
+    border-radius: 50%;
+  }
+}

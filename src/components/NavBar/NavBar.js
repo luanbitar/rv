@@ -1,12 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import s from './NavBar.scss'
 import RVLogo from 'images/RV-logo.svg'
-import { Link } from 'react-router-dom'
 
 const NavBar = () => (
-  <div className={s.container}>
-    <div className="limitWidthContainer">
+  <div className={`${s.container} parent__limit-container`}>
+    <div className="limit-container">
       <a href="https://www.redventures.com/">
         <img src={RVLogo} alt="Red Ventures logo" />
       </a>

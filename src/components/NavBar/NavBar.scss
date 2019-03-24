@@ -1,24 +1,16 @@
 @import "styles/mixins.scss";
 
 :local(.container) {
-  height: 120px;
-  display: flex;
-  @include flex-center;
-  padding: 0 98px;
+  height: 100px;
+  
   @include mq(mobile) {
-    padding: 0 20px;
     height: 70px;
   }
 
-  .limitWidthContainer {
-    @include flex1;
-    max-width: 1200px;
+  .limit-container {
     justify-content: space-between;
-    height: 100%;
     align-items: center;
-    @include mq(mobile) {
-      max-width: 90vw;
-    }
+    
     .menu {
       display: flex;
       list-style: none;
@@ -33,6 +25,7 @@
           display: none;
         }
       }
+
       .option {
         color: $grey;
         margin-left: 40px;
@@ -44,6 +37,7 @@
           color: $blue;
           border-bottom: 2px solid $red;
         }
+        
         a {
           text-decoration: none;
           color: inherit;
