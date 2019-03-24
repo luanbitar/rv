@@ -11,14 +11,18 @@ $height: 4.5rem;
   max-height: $height;
   min-height: $height;
   margin-bottom: 3rem;
+  position: relative;
+
+  .content, .unit, .type-symbol {
+    color: $grey-disabled;
+  }
+
   .content {
     margin: 0;
-    color: $blue;
     letter-spacing: 1px;
     font-size: 20px;
 
     .unit {
-      color: $grey;
       margin-left: 2px;
       font-weight: 500;
     }
@@ -27,14 +31,37 @@ $height: 4.5rem;
       font-weight: 300;
       font-size: 28px;
       .type-symbol {
-        color: $red;
         font-weight: 500;
       }
     }
   }
+
   .color {
     width: $color-size;
     height: $color-size;
     border-radius: 50%;
+    background-color: #FFF;
+  }
+
+  .price {
+    color: $red;
+    position: absolute;
+    bottom: -2rem;
+    right: 0;
+  }
+
+  &.active {
+    .content {
+      color: $blue;
+      .unit {
+        color: $grey;
+      }
+      .type-symbol {
+        color: $red;
+      }
+    }
+    .color {
+      background-color: $red;
+    }
   }
 }
