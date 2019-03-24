@@ -1,0 +1,16 @@
+@import "styles/mixins.scss";
+
+$size: 30px;
+
+:local(.container) {
+  border-radius: 50%;
+  border: 5px solid rgba(112, 112, 112, 0.0916);
+  &, .color-option{
+    width: $size;
+    height: $size;
+    transform: scale(1.05);
+  }
+  &.active {
+    border-color: $blue;
+  }
+}

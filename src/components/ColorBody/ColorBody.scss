@@ -1,0 +1,42 @@
+@import "styles/mixins.scss";
+
+:local(.container) {
+  .limit-container .section.car-section{
+    flex-direction: column;
+    @include mq(mobile) {
+      padding-top: 7rem;
+    }
+
+    .car-image {
+      width: 400px;
+      @include mq(mobile) {
+        width: 360px;
+      }
+    }
+    .color, .value {
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: 400;
+      width: 265px;
+    }
+    .color {
+      color: $blue;
+    }
+    .value {
+      color: $red;
+    }
+  }
+  .color-select {
+    display: flex;
+    @include flex-center;
+    @include mq(mobile) {
+      padding: 6rem 2rem 0 2rem;
+    }
+
+    .limit-width {
+      @include flex1;
+      justify-content: space-between;
+      max-width: 400px;
+    }
+  }
+}
