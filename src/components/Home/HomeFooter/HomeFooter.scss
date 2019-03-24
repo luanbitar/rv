@@ -1,7 +1,7 @@
 @import "styles/mixins.scss";
 
 :local(.container) {
-  height: 100px;
+  height: 80px;
   display: flex;
   @include flex-center;
   .limitWidth {

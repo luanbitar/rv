@@ -22,8 +22,8 @@
 
     .car-image {
       width: 400px;
-      @include mq(mobile) {
-        width: 360px;
+      @media (max-width: 500px) {
+        width: 320px;
       }
     }
     .color, .value {

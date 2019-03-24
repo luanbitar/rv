@@ -12,6 +12,9 @@ $height: 4.5rem;
   min-height: $height;
   margin-bottom: 3rem;
   position: relative;
+  @include mq(mobile) {
+    margin-bottom: 2rem;
+  }
 
   .content, .unit, .type-symbol {
     color: $grey-disabled;
@@ -48,6 +51,9 @@ $height: 4.5rem;
     position: absolute;
     bottom: -2rem;
     right: 0;
+    @include mq(mobile) {
+      bottom: -1.5rem;
+    }
   }
 
   &.active {
