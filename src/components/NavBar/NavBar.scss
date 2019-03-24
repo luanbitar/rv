@@ -20,7 +20,7 @@
       padding: 0;
       @include mq(mobile) {
         overflow-x: scroll;
-        margin-left: 20px;
+        margin-left: 80px;
         &::-webkit-scrollbar {
           display: none;
         }
@@ -28,11 +28,14 @@
 
       .option {
         color: $grey;
-        margin-left: 40px;
         padding-bottom: 4px;
         cursor: pointer;
         letter-spacing: 0.89px;
         flex-shrink: 0;
+        &:not(:first-of-type) {
+          margin-left: 40px;
+
+        }
         &.active {
           color: $blue;
           border-bottom: 2px solid $red;

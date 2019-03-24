@@ -58,7 +58,7 @@
       height: 600px;
       @include mq(mobile) {
         transform: rotate(-90deg);
-        height: 375px;
+        height: 360px;
       }
     }
   }
