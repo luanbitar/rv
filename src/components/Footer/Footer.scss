@@ -1,3 +1,37 @@
+@import "styles/mixins.scss";
+
+$icon-size: 35px;
+
 :local(.container) {
   box-shadow: 8px 0px 47px rgba(0, 0, 0, 0.076002);
+  .limit-container {
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    @include mq(mobile) {
+      .car, .engine, .color, .wheel {
+        display: none;
+      }
+    }
+    .label, .value, .car, .engine {
+      margin: 0;
+    }
+
+    .total {
+      .label {
+        color: $grey;
+        font-weight: 500;
+      }
+      .value {
+        color: $red;
+        font-size: 1.3rem;
+        font-weight: 300;
+      }
+    }
+
+    .color, .wheel {
+      height: $icon-size;
+      width: auto;
+    }
+  }
 }

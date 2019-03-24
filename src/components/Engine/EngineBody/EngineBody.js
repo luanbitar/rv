@@ -2,7 +2,6 @@ import React from 'react'
 
 import s from './EngineBody.scss'
 import withoutEngine from 'images/engine-1.png'
-import withEngine from 'images/engine-2.png'
 import EngineSelect from './EngineSelect/EngineSelect'
 
 const EngineBody = () => (
