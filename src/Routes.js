@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { AnimatedSwitch } from 'react-router-transition'
 
 import Home from 'pages/Home'
-import Engine from './pages/Engine'
+import Engine from 'pages/Engine'
+import Color from 'pages/Color'
 
 const Routes = () => (
   <Router>
@@ -13,6 +14,7 @@ const Routes = () => (
       atActive={{ opacity: 1 }}>
         <Route path="/" component={Home} exact />
         <Route path="/engine" component={Engine} />
+        <Route path="/color" component={Color} />
       </AnimatedSwitch>
   </Router>
 )

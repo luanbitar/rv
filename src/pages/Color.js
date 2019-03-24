@@ -4,7 +4,7 @@ import NavBar from 'components/NavBar/NavBar'
 
 import Footer from 'components/Footer/Footer'
 
-const Engine = () => (
+const Color = () => (
   <div className="main--container">
     <NavBar />
 
@@ -12,4 +12,4 @@ const Engine = () => (
   </div>
 )
 
-export default Engine
+export default Color
