@@ -8,7 +8,7 @@ const Wheels = () => (
   <div className="main--container">
     <NavBar />
     <WheelsBody />
-    <Footer />
+    <Footer to="/result" />
   </div>
 )
 

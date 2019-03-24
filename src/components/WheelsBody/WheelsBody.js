@@ -7,11 +7,12 @@ const WheelsBody = () => (
   <div className={`${s.container} parent__limit-container`}>
     <div className="limit-container">
       <h1 className="title">Wheels</h1>
-      <div className="wheels">
-        <SelectWheel />
+      <div className="wheels selected0">
         <SelectWheel active />
         <SelectWheel />
+        <SelectWheel />
       </div>
+      <div className="wheels-holder-space" />
     </div>
   </div>
 )
