@@ -5,7 +5,7 @@ import NextButton from 'components/NextButton/NextButton'
 import wheelImg from 'images/wheel-metalic.png'
 import dotRed from 'images/dot-red.png'
 
-const Footer = () => (
+const Footer = ({ to }) => (
   <div className={`${s.container} parent__limit-container`}>
     <div className="limit-container">
       <div className="total">
@@ -16,7 +16,7 @@ const Footer = () => (
       <p className="engine">75 <span className="unit">R</span></p>
       <img className="color" src={dotRed} alt="Current color" />
       <img className="wheel" src={wheelImg} alt="Current wheel" />
-      <NextButton to="/color">Next</NextButton>
+      <NextButton to={to}>Next</NextButton>
     </div>
   </div>
 )

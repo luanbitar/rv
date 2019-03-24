@@ -5,6 +5,7 @@ import { AnimatedSwitch } from 'react-router-transition'
 import Home from 'pages/Home'
 import Engine from 'pages/Engine'
 import Color from 'pages/Color'
+import Wheels from 'pages/Wheels'
 
 const Routes = () => (
   <Router>
@@ -15,6 +16,7 @@ const Routes = () => (
         <Route path="/" component={Home} exact />
         <Route path="/engine" component={Engine} />
         <Route path="/color" component={Color} />
+        <Route path="/wheels" component={Wheels} />
       </AnimatedSwitch>
   </Router>
 )

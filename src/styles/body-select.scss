@@ -40,7 +40,7 @@ $mb-spacing: 5vw;
   
       .text {
         width: 100%;
-        padding: 5rem 0 3rem 0;
+        padding: 0 0 6rem 0;
         @include mq(mobile) {
           font-size: 2rem;
           position: absolute;
@@ -63,7 +63,7 @@ $mb-spacing: 5vw;
         }
         .description {
           color: $grey-disabled;
-          max-width: 400px;
+          max-width: 450px;
           @include mq(mobile) {
             font-size: 0.8rem;
             line-height: 1.4rem;

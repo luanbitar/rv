@@ -1,10 +1,23 @@
 @import "styles/mixins.scss";
 
 :local(.container) {
+  .limit-container .section.radio-section {
+    padding: 0rem 0 6rem 0;
+    @include mq(mobile) {
+      padding: 0;
+    }
+    
+    .text .title {
+      line-height: 7rem;
+      @include mq(mobile) {
+        line-height: 4rem;
+      }
+    }
+  }
   .limit-container .section.car-section{
     flex-direction: column;
     @include mq(mobile) {
-      padding-top: 7rem;
+      padding-top: 10rem;
     }
 
     .car-image {
@@ -28,8 +41,8 @@
   }
   .color-select {
     display: flex;
-    @include flex-center;
     @include mq(mobile) {
+      @include flex-center;
       padding: 6rem 2rem 0 2rem;
     }
 

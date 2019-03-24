@@ -1,15 +1,15 @@
 import React from 'react'
 
 import NavBar from 'components/NavBar/NavBar'
-import EngineBody from 'components/EngineBody/EngineBody'
+import WheelsBody from 'components/WheelsBody/WheelsBody'
 import Footer from 'components/Footer/Footer'
 
-const Engine = () => (
+const Wheels = () => (
   <div className="main--container">
     <NavBar />
-    <EngineBody />
-    <Footer to="/color" />
+    <WheelsBody />
+    <Footer />
   </div>
 )
 
-export default Engine
+export default Wheels

@@ -8,7 +8,7 @@ const Color = () => (
   <div className="main--container">
     <NavBar />
     <ColorBody />
-    <Footer />
+    <Footer to="/wheels" />
   </div>
 )
 
