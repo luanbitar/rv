@@ -1,7 +1,7 @@
 import React from 'react'
 
 import s from './HomeFooter.scss'
-import FooterOption from '../FooterOption/FooterOption'
+import FooterOption from './FooterOption/FooterOption'
 
 const HomeFooter = () => (
   <div className={s.container}>

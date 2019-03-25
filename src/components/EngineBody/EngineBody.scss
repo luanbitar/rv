@@ -2,10 +2,13 @@
 
 :local(.container) {
   .car-image {
-    height: 600px;
+    height: 500px;
     @include mq(mobile) {
       transform: rotate(-90deg);
       height: 360px;
     }
+  }
+  .limit-container .section.radio-section .text {
+    padding: 0 0 3rem 0;
   }
 }

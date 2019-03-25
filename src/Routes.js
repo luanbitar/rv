@@ -6,6 +6,7 @@ import Home from 'pages/Home'
 import Engine from 'pages/Engine'
 import Color from 'pages/Color'
 import Wheels from 'pages/Wheels'
+import Result from 'pages/Result'
 
 const Routes = () => (
   <Router>
@@ -17,6 +18,7 @@ const Routes = () => (
         <Route path="/engine" component={Engine} />
         <Route path="/color" component={Color} />
         <Route path="/wheels" component={Wheels} />
+        <Route path="/result" component={Result} />
       </AnimatedSwitch>
   </Router>
 )

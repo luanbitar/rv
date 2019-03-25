@@ -23,7 +23,7 @@ $mb-spacing: 5vw;
         align-items: center;
       }
     }
-    &.radio-section {
+    &.radio-section, &.detail-section {
       flex-direction: column;
       justify-content: center;
       align-items: stretch;

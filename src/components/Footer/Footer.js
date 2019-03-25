@@ -1,7 +1,7 @@
 import React from 'react'
 
 import s from './Footer.scss'
-import NextButton from 'components/NextButton/NextButton'
+import ButtonNext from 'components/ButtonNext/ButtonNext'
 import wheelImg from 'images/wheel-metalic.png'
 import dotRed from 'images/dot-red.png'
 
@@ -16,7 +16,7 @@ const Footer = ({ to }) => (
       <p className="engine">75 <span className="unit">R</span></p>
       <img className="color" src={dotRed} alt="Current color" />
       <img className="wheel" src={wheelImg} alt="Current wheel" />
-      <NextButton to={to}>Next</NextButton>
+      <ButtonNext to={to}>Next</ButtonNext>
     </div>
   </div>
 )
