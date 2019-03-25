@@ -11,11 +11,8 @@ $xsm-bp: 430px;
   justify-content: space-around;
   max-height: $height;
   min-height: $height;
-  margin-bottom: 3rem;
   position: relative;
-  @include mq(mobile) {
-    margin-bottom: 2rem;
-  }
+  cursor: pointer;
 
   .content, .unit, .type-symbol {
     color: $grey-disabled;

@@ -11,7 +11,15 @@
       height: 320px;
     }
   }
-  .limit-container .section.radio-section .text {
-    padding: 0 0 3rem 0;
+  .limit-container .section.radio-section {
+    .text {
+      padding: 0 0 3rem 0;
+    }
+    .engine-select {
+      margin-bottom: 3rem;
+      @include mq(mobile) {
+        margin-bottom: 2rem;
+      }
+    }
   }
 }
