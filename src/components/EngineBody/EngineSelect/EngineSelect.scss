@@ -2,6 +2,7 @@
 
 $color-size: 20px;
 $height: 4.5rem;
+$xsm-bp: 430px;
 
 :local(.container) {
   background: $select-bg;
@@ -23,7 +24,10 @@ $height: 4.5rem;
   .content {
     margin: 0;
     letter-spacing: 1px;
-    font-size: 20px;
+    font-size: 1.3rem;
+    @media (max-width: $xsm-bp) {
+      font-size: 1rem;
+    }
 
     .unit {
       margin-left: 2px;
@@ -32,7 +36,11 @@ $height: 4.5rem;
     
     &.type {
       font-weight: 300;
-      font-size: 28px;
+      font-size: 2rem;
+      @media (max-width: $xsm-bp) {
+        font-size: 1.4rem;
+      }
+
       .type-symbol {
         font-weight: 500;
       }
