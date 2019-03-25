@@ -2,7 +2,7 @@ import React from 'react'
 
 import s from "./EngineSelect.scss"
 
-const EngineSelect = ({ kwh, type, range, price, active }) => (
+const EngineSelect = ({ kwh, type, range, price, active }) => 
   <div className={`${s.container} ${active ? 'active': ''}`}>
     <p className="content type">{kwh} <span className="type-symbol">{type}</span></p>
     <p className="content">{kwh} <span className="unit">kWh</span></p>
@@ -10,6 +10,5 @@ const EngineSelect = ({ kwh, type, range, price, active }) => (
     <div className="color" />
     {price && active && <div className="price">+$ {price}</div>}
   </div>
-)
 
 export default EngineSelect

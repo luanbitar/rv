@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import s from './NavBar.scss'
 import RVLogo from 'images/RV-logo.svg'
 
-const NavBar = () => (
+const NavBar = () => 
   <div className={`${s.container} parent__limit-container`}>
     <div className="limit-container">
       <a href="https://www.redventures.com/">
@@ -31,6 +31,5 @@ const NavBar = () => (
       </ul>
     </div>
   </div>
-)
 
 export default NavBar

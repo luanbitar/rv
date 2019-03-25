@@ -2,9 +2,9 @@ import React from 'react'
 
 import s from './HomeBody.scss'
 import CarImage from 'images/car-home.png'
-import NextButton from '../../NextButton/NextButton';
+import ButtonNext from 'components/ButtonNext/ButtonNext'
 
-const HomeBody = () => (
+const HomeBody = () => 
   <div className={s.container}>
     <div className="section">
       <h2 className="title">Build your</h2>
@@ -12,11 +12,11 @@ const HomeBody = () => (
     </div>
     <img className="carImage" src={CarImage} alt="Car red" />
     <div className="btn">
-      <NextButton to="/engine">
+      <ButtonNext to="/engine">
         <span className="advance">Begin</span>
-      </NextButton>
+      </ButtonNext>
     </div>
   </div>
-)
+
 
 export default HomeBody

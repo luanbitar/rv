@@ -5,7 +5,7 @@ import ButtonNext from 'components/ButtonNext/ButtonNext'
 import wheelImg from 'images/wheel-metalic.png'
 import dotRed from 'images/dot-red.png'
 
-const Footer = ({ to }) => (
+const Footer = ({ to }) => 
   <div className={`${s.container} parent__limit-container`}>
     <div className="limit-container">
       <div className="total">
@@ -19,6 +19,5 @@ const Footer = ({ to }) => (
       <ButtonNext to={to}>Next</ButtonNext>
     </div>
   </div>
-)
 
 export default Footer

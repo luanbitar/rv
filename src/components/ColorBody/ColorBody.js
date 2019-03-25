@@ -6,7 +6,7 @@ import redCar from 'images/color-red.png'
 import ColorSelect from './ColorSelect/ColorSelect'
 import dotImage from 'images/dot-red.png'
 
-const ColorBody = () => (
+const ColorBody = () => 
   <div className={`${body.container} ${local.container} parent__limit-container`}>
     <div className="limit-container">
       <div className="section car-section">
@@ -29,6 +29,5 @@ const ColorBody = () => (
       </div>
     </div>
   </div>
-)
 
 export default ColorBody

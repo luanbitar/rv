@@ -5,7 +5,7 @@ import local from './EngineBody.scss'
 import withoutEngine from 'images/engine-1.png'
 import EngineSelect from './EngineSelect/EngineSelect'
 
-const EngineBody = () => (
+const EngineBody = () => 
   <div className={`${body.container} ${local.container} parent__limit-container`}>
     <div className="limit-container">
       <div className="section car-section">
@@ -21,6 +21,5 @@ const EngineBody = () => (
       </div>
     </div>
   </div>
-)
 
 export default EngineBody

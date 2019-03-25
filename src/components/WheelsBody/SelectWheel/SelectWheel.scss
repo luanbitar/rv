@@ -1,6 +1,10 @@
 @import "styles/mixins.scss";
 
 :local(.container) {
+  opacity: 0.5;
+  &.active {
+    opacity: 1;
+  }
   .name, .price {
     margin: 0;
     text-align: center;

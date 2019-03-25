@@ -3,7 +3,7 @@ import React from 'react'
 import s from './HomeFooter.scss'
 import FooterOption from './FooterOption/FooterOption'
 
-const HomeFooter = () => (
+const HomeFooter = () => 
   <div className={s.container}>
     <div className="limitWidth">
       <FooterOption value="2.5" unit="s" desc="From 0 to 100" />
@@ -11,6 +11,5 @@ const HomeFooter = () => (
       <FooterOption value="250" unit="mp/h" desc="Max speed" />
     </div>
   </div>
-);
 
 export default HomeFooter

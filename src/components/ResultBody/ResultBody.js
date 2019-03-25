@@ -5,7 +5,7 @@ import local from './ResultBody.scss'
 import redCar from 'images/final-red.png'
 import ButtonRedo from 'components/ButtonRedo/ButtonRedo'
 
-const ResultBody = () => (
+const ResultBody = () => 
   <div className={`${body.container} ${local.container} parent__limit-container`}>
     <div className="limit-container">
       <div className="section car-section">
@@ -43,6 +43,5 @@ const ResultBody = () => (
       </div>
     </div>
   </div>
-)
 
 export default ResultBody

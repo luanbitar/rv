@@ -42,11 +42,11 @@ $mb-offset: 160px;
       transform: translate(-50%, -50%);
       left: 50%;
       top: 50%;
-      @for $i from 0 through 2 {
-        &.selected#{$i} {
-          left: calc(50% + #{$offset} - (#{$i} * #{$offset}));
-        }
-      }
+      // @for $i from 0 through 2 {
+      //   &.selected#{$i} {
+      //     left: calc(50% + #{$offset} - (#{$i} * #{$offset}));
+      //   }
+      // }
       @include mq(mobile) {
         @for $i from 0 through 2 {
           &.selected#{$i} {
