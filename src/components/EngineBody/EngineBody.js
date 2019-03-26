@@ -17,7 +17,7 @@ const EngineBody = ({ onSelectEngine, engines, engineSelected }) =>
         </div>
         {engines.map(engine => 
           <div className="engine-select" onClick={() => onSelectEngine(engine.id)} key={engine.id}>
-            <EngineSelect kwh={engine.kwh} type={engine.type} range={engine.range} active={engine.id == engineSelected} />
+            <EngineSelect kwh={engine.kwh} type={engine.type} range={engine.range} price={engine.price} active={engine.id === engineSelected} />
           </div>
         )}
       </div>

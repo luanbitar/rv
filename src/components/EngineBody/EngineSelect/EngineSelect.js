@@ -8,7 +8,7 @@ const EngineSelect = ({ kwh, type, range, price, active }) =>
     <p className="content">{kwh} <span className="unit">kWh</span></p>
     <p className="content">{range} <span className="unit">miles range</span></p>
     <div className="color" />
-    {price && active && <div className="price">+$ {price}</div>}
+    <div className={`price ${price !== 0 && active ? 'price-active' : ''}`}>+$ {price}</div>
   </div>
 
 export default EngineSelect

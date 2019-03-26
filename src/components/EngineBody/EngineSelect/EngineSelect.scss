@@ -13,6 +13,9 @@ $xsm-bp: 430px;
   min-height: $height;
   position: relative;
   cursor: pointer;
+  & * {
+    transition: all .2s ease-in;
+  }
 
   .content, .unit, .type-symbol {
     color: $grey-disabled;
@@ -56,6 +59,11 @@ $xsm-bp: 430px;
     position: absolute;
     bottom: -2rem;
     right: 0;
+    opacity: 0;
+    transition-delay: 0.1s;
+    &.price-active {
+      opacity: 1;
+    }
     @include mq(mobile) {
       bottom: -1.5rem;
     }
