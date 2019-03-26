@@ -3,7 +3,7 @@ import React from 'react'
 import body from 'styles/body-select.scss'
 import local from './ColorBody.scss'
 import ColorSelect from './ColorSelect/ColorSelect'
-import { dots, cars } from 'utils/colors'
+import { dots, cars } from 'utils/images'
 
 const ColorBody = ({ colors, onSelectColor, selectedColor }) => 
   <div className={`${body.container} ${local.container} parent__limit-container`}>

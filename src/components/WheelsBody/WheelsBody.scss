@@ -34,19 +34,14 @@ $mb-offset: 160px;
 
     .wheels {
       @include flex1;
+      @include transition;
       align-items: flex-start;
       justify-content: space-between;
       flex-flow: row;
-      transition: all 1s ease-in;
       position: absolute;
       transform: translate(-50%, -50%);
       left: 50%;
       top: 50%;
-      // @for $i from 0 through 2 {
-      //   &.selected#{$i} {
-      //     left: calc(50% + #{$offset} - (#{$i} * #{$offset}));
-      //   }
-      // }
       @include mq(mobile) {
         @for $i from 0 through 2 {
           &.selected#{$i} {

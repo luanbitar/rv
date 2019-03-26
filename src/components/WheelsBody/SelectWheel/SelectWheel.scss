@@ -2,7 +2,11 @@
 
 :local(.container) {
   opacity: 0.5;
+  @include transition;
+  transform: scale(0.8);
+  cursor: pointer;
   &.active {
+    transform: scale(1);
     opacity: 1;
   }
   .name, .price {

@@ -21,7 +21,7 @@ export default (state = initialState, action) => {
     case SET_WHEELS:
       return {
         ...state,
-        selectedWheel: action.payload
+        selectedWheels: action.payload
       }
     default:
       return state
