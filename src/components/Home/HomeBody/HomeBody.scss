@@ -9,6 +9,9 @@
 @mixin mobile-break {
   @media (max-width: 900px) { @content; }
 }
+@mixin xsm-break {
+  @media (max-width: 359px) { @content; }
+}
 @mixin subtitle-size($size: 8rem) {
   font-size: $size;
   line-height: $size;
@@ -59,6 +62,9 @@
       @include mobile-break() {
         @include subtitle-size(5rem);
       }
+      @include xsm-break() {
+        @include subtitle-size(4rem);
+      }
       span {
         font-weight: 500;
         color: $red;
@@ -70,6 +76,9 @@
     bottom: 34px;
     @include mobile-break() {
       width: 350px;
+    }
+    @include xsm-break() {
+      width: 310px;
     }
   }
   .btn {
