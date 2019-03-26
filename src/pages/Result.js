@@ -1,15 +1,18 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 
-import * as carActions from 'reducers/Car/actionCreators'
+import { resetSelection as resetOptions } from 'reducers/Car/actionCreators'
+import { resetSelections as resetSteps } from 'reducers/Steps/actionCreators'
 
 import NavBar from 'components/NavBar/NavBar'
 import ResultBody from 'components/ResultBody/ResultBody'
 
 class Result extends Component {
 
-  onRebuild = () => this.props.resetSelection()
+  onRebuild = () => {
+    this.props.resetOptions()
+    this.props.resetSteps()
+  }
 
   render = () => {
     const { price,
@@ -34,8 +37,11 @@ class Result extends Component {
   }
 }
 
-const mapStateToProps = state => ({ carData: state.CarReducer })
+const mapStateToProps = state => ({ carData: state.carReducer })
 
-const mapDispatchToProps = dispatch => bindActionCreators(carActions, dispatch)
+const mapDispatchToProps = dispatch => ({
+  resetOptions: () => dispatch(resetOptions()),
+  resetSteps: () => dispatch(resetSteps())
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(Result)

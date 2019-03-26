@@ -1,6 +1,9 @@
 import { combineReducers } from 'redux'
-import CarReducer from 'reducers/Car/CarReducer'
+
+import carReducer from 'reducers/Car/carReducer'
+import stepsReducer from 'reducers/Steps/stepsReducer'
 
 export default combineReducers({
-  CarReducer
+  carReducer,
+  stepsReducer
 })

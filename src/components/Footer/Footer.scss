@@ -8,13 +8,24 @@ $icon-size: 20px;
     justify-content: space-between;
     align-items: center;
     height: 80px;
+    & * {
+      @include transition;
+    }
     @include mq(mobile) {
       .car, .engine, .color, .wheel {
         display: none;
       }
     }
+
     .label, .value, .car, .engine {
       margin: 0;
+    }
+
+    .disabled {
+      opacity: 0;
+    }
+    .engine, .color, .wheel {
+      opacity: 1;
     }
 
     .total {
@@ -41,7 +52,7 @@ $icon-size: 20px;
       }
     }
 
-    .color, .wheel {
+    .color, .wheel, .disabled {
       height: $icon-size;
       width: auto;
     }

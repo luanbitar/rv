@@ -2,20 +2,18 @@ import React from 'react'
 
 import s from './Footer.scss'
 import ButtonNext from 'components/ButtonNext/ButtonNext'
-import wheelImg from 'images/wheel-metalic.png'
-import dotRed from 'images/dot-red.png'
 
-const Footer = ({ to }) => 
+const Footer = ({ to, total, currentStep, engine, color, wheels }) => 
   <div className={`${s.container} parent__limit-container`}>
     <div className="limit-container">
       <div className="total">
         <p className="label">Total</p>
-        <h3 className="value">$63.000</h3>
+        <h3 className="value">${total}</h3>
       </div>
       <p className="car">Model R</p>
-      <p className="engine">75 <span className="unit">R</span></p>
-      <img className="color" src={dotRed} alt="Current color" />
-      <img className="wheel" src={wheelImg} alt="Current wheel" />
+      <p className={currentStep > 0 ? "engine" : "disabled"}>{engine.kwh} <span className="unit">{engine.type}</span></p>
+      <img className={currentStep > 1 ? "color" : "disabled"} src={color} alt="Current color" />
+      <img className={currentStep > 2 ? "wheel" : "disabled"} src={wheels} alt="Current wheel" />
       <ButtonNext to={to}>Next</ButtonNext>
     </div>
   </div>

@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 
-import * as carActions from 'reducers/Car/actionCreators'
+import { setEngine } from 'reducers/Car/actionCreators'
+import { tookAStep } from 'reducers/Steps/actionCreators'
 import NavBar from 'components/NavBar/NavBar'
 import EngineBody from 'components/EngineBody/EngineBody'
-import Footer from 'components/Footer/Footer'
+import FooterContainer from 'components/Footer/FooterContainer'
 
 class Engine extends Component {
+
+  componentDidMount = () => this.props.tookAStep(1)
 
   onSelectEngine = engineSelected => this.props.setEngine(engineSelected)
 
@@ -21,14 +23,17 @@ class Engine extends Component {
           onSelectEngine={this.onSelectEngine}
           engines={engine.items}
           selectedEngine={selectedEngine} />
-        <Footer to="/color" />
+        <FooterContainer to="/color" />
       </div>
     )
   }
 }
 
-const mapStateToProps = state => ({ carData: state.CarReducer })
+const mapStateToProps = state => ({ carData: state.carReducer })
 
-const mapDispatchToProps = dispatch => bindActionCreators(carActions, dispatch)
+const mapDispatchToProps = dispatch => ({
+  setEngine: id => dispatch(setEngine(id)),
+  tookAStep: step => dispatch(tookAStep(step))
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(Engine)

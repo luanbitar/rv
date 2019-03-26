@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 
-import * as carActions from 'reducers/Car/actionCreators'
+import { setWheels } from 'reducers/Car/actionCreators'
+import { tookAStep } from 'reducers/Steps/actionCreators'
 import NavBar from 'components/NavBar/NavBar'
 import WheelsBody from 'components/WheelsBody/WheelsBody'
-import Footer from 'components/Footer/Footer'
+import FooterContainer from 'components/Footer/FooterContainer'
 
 class Wheels extends Component {
 
+  componentDidMount = () => this.props.tookAStep(3)
+  
   onSelectWheels = selectedWheels => this.props.setWheels(selectedWheels)
 
   render = () => {
@@ -21,14 +23,17 @@ class Wheels extends Component {
           onSelectWheels={this.onSelectWheels}
           wheels={wheels.items}
           selectedWheels={selectedWheels} />
-        <Footer to="/result" />
+        <FooterContainer to="/result" />
       </div>
     )
   }
 }
 
-const mapStateToProps = state => ({ carData: state.CarReducer })
+const mapStateToProps = state => ({ carData: state.carReducer })
 
-const mapDispatchToProps = dispatch => bindActionCreators(carActions, dispatch)
+const mapDispatchToProps = dispatch => ({
+  setWheels: id => dispatch(setWheels(id)),
+  tookAStep: step => dispatch(tookAStep(step))
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(Wheels)

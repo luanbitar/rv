@@ -1,18 +1,21 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 
-import * as carActions from 'reducers/Car/actionCreators'
+import { setColor } from 'reducers/Car/actionCreators'
+import { tookAStep } from 'reducers/Steps/actionCreators'
 import NavBar from 'components/NavBar/NavBar'
 import ColorBody from 'components/ColorBody/ColorBody'
-import Footer from 'components/Footer/Footer'
+import FooterContainer from 'components/Footer/FooterContainer'
 
 class Color extends Component {
+
+  componentDidMount = () => this.props.tookAStep(2)
 
   onSelectColor = colorSelected => this.props.setColor(colorSelected)
 
   render = () => {
     const { color, selectedColor } = this.props.carData
+
     return (
       <div className="main--container">
         <NavBar />
@@ -20,14 +23,17 @@ class Color extends Component {
           onSelectColor={this.onSelectColor}
           selectedColor={selectedColor}
           colors={color} />
-        <Footer to="/wheels" />
+        <FooterContainer to="/wheels" />
       </div>
     )
   }
 }
 
-const mapStateToProps = state => ({ carData: state.CarReducer })
+const mapStateToProps = state => ({ carData: state.carReducer })
 
-const mapDispatchToProps = dispatch => bindActionCreators(carActions, dispatch)
+const mapDispatchToProps = dispatch => ({
+  setColor: id => dispatch(setColor(id)),
+  tookAStep: step => dispatch(tookAStep(step))
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(Color)

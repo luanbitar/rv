@@ -17,7 +17,7 @@ class App extends Component {
     <Routes />
 }
 
-const mapStateToProps = state => ({ carData: state.CarReducer })
+const mapStateToProps = state => ({ carData: state.carReducer })
 
 const mapDispatchToProps = dispatch => bindActionCreators(carActions, dispatch)
 
