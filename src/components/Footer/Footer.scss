@@ -29,6 +29,18 @@ $icon-size: 20px;
       }
     }
 
+    .car, .engine {
+      color: $blue;
+      letter-spacing: 2px;
+    }
+
+    .engine {
+      font-weight: 500;
+      .unit {
+        color: $red;
+      }
+    }
+
     .color, .wheel {
       height: $icon-size;
       width: auto;

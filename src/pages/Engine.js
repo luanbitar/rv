@@ -1,20 +1,24 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 
+import * as carActions from 'reducers/Car/actionCreators'
 import NavBar from 'components/NavBar/NavBar'
 import EngineBody from 'components/EngineBody/EngineBody'
 import Footer from 'components/Footer/Footer'
-import { connect } from 'react-redux'
+
 
 class Engine extends Component {
 
-  state = { engineSelected: null }
+  state = { engineSelected: 1 }
 
-  onSelectEngine = engineSelected => this.setState({ engineSelected })
-  // onSelectEngine = engineSelected => console.log(engineSelected)
+  onSelectEngine = engineSelected => {
+    this.setState({ engineSelected })
+    this.props.setEngine(engineSelected)
+  }
 
   render = () => {
-    const { engine } = this.props.carData,
-          { engineSelected } = this.state
+    const { engine, selectedEngine } = this.props.carData
 
     return (
       <div className="main--container">
@@ -22,7 +26,7 @@ class Engine extends Component {
         <EngineBody 
           onSelectEngine={this.onSelectEngine}
           engines={engine.items}
-          engineSelected={engineSelected} />
+          selectedEngine={selectedEngine} />
         <Footer to="/color" />
       </div>
     )
@@ -31,4 +35,6 @@ class Engine extends Component {
 
 const mapStateToProps = state => ({ carData: state.CarReducer })
 
-export default connect(mapStateToProps)(Engine)
+const mapDispatchToProps = dispatch => bindActionCreators(carActions, dispatch)
+
+export default connect(mapStateToProps, mapDispatchToProps)(Engine)
