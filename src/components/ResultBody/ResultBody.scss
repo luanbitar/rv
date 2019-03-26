@@ -1,0 +1,92 @@
+@import "styles/mixins.scss";
+
+:local(.container) {
+  .limit-container .section.car-section{
+    justify-content: flex-start;
+    @include mq(mobile) {
+      justify-content: center;
+      padding-top: 6rem;
+    }
+
+    .car-image {
+      width: 400px;
+      @media (max-width: 500px) {
+        width: 320px;
+      }
+    }
+  }
+
+  .limit-container .section.detail-section {
+    padding: 0 0 0 2rem;
+    @include mq(mobile) {
+      padding: 0;
+    }
+    
+    .text {
+      padding: 0;
+      .title {
+        line-height: 7rem;
+        @include mq(mobile) {
+          line-height: 4rem;
+        }
+      }
+    }
+
+    .title {
+      font-weight: 400;
+      letter-spacing: 3px;
+      .pre {
+        font-weight: 300;
+      }
+      .unit {
+        color: $red;
+        font-weight: 500;
+      }
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+
+      .label, .value {
+        margin: 0;
+      }
+
+      .label {
+        color: $blue;
+      }
+
+      .value {
+        color: $red;
+      }
+
+      &.total {
+        font-size: 1.5rem;
+        padding: 1.5rem 0;
+        .value {
+          font-weight: 500;
+        }
+      }
+    }
+
+    .spacer {
+      margin: 0;
+      border-width: 0 0 1px 0;
+      border-color: rgba(151, 151, 151, 0.418);
+    }
+
+    .redo {
+      display: flex;
+      @include flex-center;
+      width: 167px;
+      align-self: center;
+      padding: 2rem;
+      box-sizing: border-box;
+      .icon {
+        margin-left: 12px;
+      }
+    }
+  }
+}

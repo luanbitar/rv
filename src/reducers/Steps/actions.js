@@ -1,0 +1,3 @@
+export const TOOK_A_STEP = 'TOOK_A_STEP'
+export const RESET_SELECTIONS = 'RESET_SELECTIONS'
+

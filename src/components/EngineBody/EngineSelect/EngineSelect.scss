@@ -1,0 +1,86 @@
+@import "styles/mixins.scss";
+
+$color-size: 20px;
+$height: 4.5rem;
+$xsm-bp: 430px;
+
+:local(.container) {
+  background: $select-bg;
+  @include flex1;
+  align-items: center;
+  justify-content: space-around;
+  max-height: $height;
+  min-height: $height;
+  position: relative;
+  cursor: pointer;
+  & * {
+    @include transition;
+  }
+
+  .content, .unit, .type-symbol {
+    color: $grey-disabled;
+  }
+
+  .content {
+    margin: 0;
+    letter-spacing: 1px;
+    font-size: 1.3rem;
+    @media (max-width: $xsm-bp) {
+      font-size: 1rem;
+    }
+
+    .unit {
+      margin-left: 2px;
+      font-weight: 500;
+    }
+    
+    &.type {
+      font-weight: 300;
+      font-size: 2rem;
+      @media (max-width: $xsm-bp) {
+        font-size: 1.4rem;
+      }
+
+      .type-symbol {
+        font-weight: 500;
+      }
+    }
+  }
+
+  .color {
+    width: $color-size;
+    height: $color-size;
+    border-radius: 50%;
+    background-color: #FFF;
+  }
+
+  .price {
+    color: $red;
+    position: absolute;
+    bottom: -2rem;
+    right: 0;
+    opacity: 0;
+    transition-delay: 0.1s;
+    &.price-active {
+      opacity: 1;
+    }
+    @include mq(mobile) {
+      bottom: -1.5rem;
+    }
+  }
+
+  &.active {
+    .content {
+      color: $blue;
+      .unit {
+        color: $grey;
+      }
+      .type-symbol {
+        color: $red;
+      }
+    }
+    .color {
+      background-color: $red;
+    }
+  }
+}

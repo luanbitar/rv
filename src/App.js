@@ -1,9 +1,24 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
 
-import Router from './Router'
+import * as carActions from 'reducers/Car/actionCreators'
+import Routes from './Routes'
+import { fetchData } from 'utils/fetch'
 
-const App = () => (
-  <Router />
-)
+class App extends Component {
 
-export default App
+  componentDidMount = async () => {
+    const result = await fetchData()
+    this.props.setCarData(result.data)
+  }
+
+  render = () =>
+    <Routes />
+}
+
+const mapStateToProps = state => ({ carData: state.carReducer })
+
+const mapDispatchToProps = dispatch => bindActionCreators(carActions, dispatch)
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)

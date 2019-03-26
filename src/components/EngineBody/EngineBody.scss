@@ -1,0 +1,25 @@
+@import "styles/mixins.scss";
+
+:local(.container) {
+  .car-image {
+    height: 500px;
+    @include mq(mobile) {
+      transform: rotate(-90deg);
+      height: 360px;
+    }
+    @media (max-width: 360px) {
+      height: 320px;
+    }
+  }
+  .limit-container .section.radio-section {
+    .text {
+      padding: 0 0 3rem 0;
+    }
+    .engine-select {
+      margin-bottom: 3rem;
+      @include mq(mobile) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

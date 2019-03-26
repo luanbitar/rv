@@ -1,0 +1,76 @@
+@import "styles/mixins.scss";
+
+$mb-spacing: 5vw;
+
+:local(.container) {
+  flex-direction: row;
+  flex: 1;
+  .limit-container {
+    @include mq(mobile) {
+      flex-direction: column;
+    }
+  }
+
+  .section {
+    @include flex1;
+    justify-content: center;
+    align-items: center;
+
+    &.car-section {
+      @include mq(mobile) {
+        max-height: 200px;
+        padding-top: 2rem;
+        align-items: center;
+      }
+    }
+    &.radio-section, &.detail-section {
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+      box-sizing: border-box;
+      max-width: 50vw;
+      position: relative;
+      top: -20px;
+      @include mq(mobile) {
+        justify-content: flex-start;
+        position: static;
+        max-width: unset;
+        height: unset;
+      }
+  
+      .text {
+        width: 100%;
+        padding: 0 0 6rem 0;
+        @include mq(mobile) {
+          font-size: 2rem;
+          position: absolute;
+          padding: 0;
+          top: 4rem;
+          left: $mb-spacing;
+          right: $mb-spacing;
+          width: unset;
+        }
+        .title, .description {
+          margin: 0;
+        }
+        .title {
+          color: $blue;
+          font-weight: 300;
+          font-size: 3rem;
+          @include mq(mobile) {
+            font-size: 2rem;
+          }
+        }
+        .description {
+          color: $grey-disabled;
+          max-width: 450px;
+          @include mq(mobile) {
+            font-size: 0.8rem;
+            line-height: 1.4rem;
+            letter-spacing: 0.2px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import "styles/mixins.scss";
+
+:local(.container) {
+  opacity: 0.5;
+  @include transition;
+  transform: scale(0.8);
+  cursor: pointer;
+  &.active {
+    transform: scale(1);
+    opacity: 1;
+  }
+  .name, .price {
+    margin: 0;
+    text-align: center;
+    font-weight: 400;
+  }
+  .name {
+    color: $blue;
+    padding-top: 2rem;
+  }
+  .price {
+    color: $red;
+  }
+
+  .wheel {
+    width: 265px;
+    height: auto;
+    @include mq(mobile) {
+      width: 200px;
+      height: auto;
+    }
+  }
+}

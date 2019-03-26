@@ -1,0 +1,46 @@
+@import 'styles/variables.scss';
+
+@mixin mq($media) {
+  @if $media == mobile {
+    @media only screen and (max-width: $mq-mobile) { @content; }
+  }
+  @else if $media == medium {
+    @media only screen and (min-width: $mq-mobile + 1) and (max-width: $mq-wide - 1) { @content; }
+  }
+  @else if $media == wide {
+    @media only screen and (min-width: $mq-wide) { @content; }
+  }
+}
+
+@mixin flex1 {
+  display: flex;
+  flex: 1;
+}
+
+@mixin flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin transition {
+  transition: all .2s ease-in;
+}
+
+.parent__limit-container {
+  display: flex;
+  @include flex-center;
+  padding: 0 98px;
+  max-width: 100vw;
+  box-sizing: content-box;
+  @include mq(mobile) {
+    padding: 0 20px;
+  }
+  .limit-container {
+    @include flex1;
+    max-width: 1200px;
+    height: 100%;
+    @include mq(mobile) {
+      max-width: 90vw;
+    }
+  }
+}

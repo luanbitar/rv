@@ -1,0 +1,92 @@
+@import "styles/mixins.scss";
+
+@mixin wide-break {
+  @media (min-width: 1000px) and (max-width: 1100px) { @content; }
+}
+@mixin medium-break {
+  @media (min-width: 901px) and (max-width: 999px) { @content; }
+}
+@mixin mobile-break {
+  @media (max-width: 900px) { @content; }
+}
+@mixin xsm-break {
+  @media (max-width: 359px) { @content; }
+}
+@mixin subtitle-size($size: 8rem) {
+  font-size: $size;
+  line-height: $size;
+}
+
+:local(.container) {
+  @include flex1;
+  @include flex-center;
+  flex-direction: column;
+  position: relative;
+  top: 20px;
+  h2, h1 {
+    margin: 0;
+  }
+  .section {
+    position: relative;
+    left: -205px;
+    @include wide-break() {
+      left: -185px;
+    }
+    @include medium-break() {
+      left: -165px;
+    }
+    @include mobile-break() {
+      position: static;
+    }
+    .title {
+      color: $red;
+      font-size: 1.875rem;
+      letter-spacing: 10.84px;
+      font-weight: 500;
+      @include mobile-break() {
+        font-size: 1rem;
+      }
+    }
+    .subTitle {
+      color: $blue;
+      @include subtitle-size();
+      font-weight: 300;
+      letter-spacing: 12.5px;
+      text-transform: uppercase;
+      @include wide-break() {
+        @include subtitle-size(7rem);
+      }
+      @include medium-break() {
+        @include subtitle-size(6rem);
+      }
+      @include mobile-break() {
+        @include subtitle-size(5rem);
+      }
+      @include xsm-break() {
+        @include subtitle-size(4rem);
+      }
+      span {
+        font-weight: 500;
+        color: $red;
+      }
+    }
+  }
+  .carImage {
+    position: relative;
+    bottom: 34px;
+    @include mobile-break() {
+      width: 350px;
+    }
+    @include xsm-break() {
+      width: 310px;
+    }
+  }
+  .btn {
+    position: relative;
+    bottom: 50px;
+    flex: 0 0 auto;
+    .advance {
+      letter-spacing: 10px;
+    }
+  }
+}
