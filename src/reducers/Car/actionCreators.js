@@ -1,4 +1,4 @@
-import { SET_CAR_DATA, SET_ENGINE, SET_COLOR, SET_WHEELS } from './actions'
+import { SET_CAR_DATA, SET_ENGINE, SET_COLOR, SET_WHEELS, RESET_SELECTION } from './actions'
 
 export const setCarData = payload => ({
   type: SET_CAR_DATA,
@@ -18,4 +18,8 @@ export const setColor = payload => ({
 export const setWheels = payload => ({
   type: SET_WHEELS,
   payload
+})
+
+export const resetSelection = () => ({
+  type: RESET_SELECTION
 })

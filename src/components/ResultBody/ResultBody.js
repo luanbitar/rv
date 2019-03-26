@@ -2,14 +2,14 @@ import React from 'react'
 
 import body from 'styles/body-select.scss'
 import local from './ResultBody.scss'
-import redCar from 'images/final-red.png'
+import { finalImages } from 'utils/images'
 import ButtonRedo from 'components/ButtonRedo/ButtonRedo'
 
-const ResultBody = () => 
+const ResultBody = ({ price, engine, color, wheels, total, onRebuild }) => 
   <div className={`${body.container} ${local.container} parent__limit-container`}>
     <div className="limit-container">
       <div className="section car-section">
-        <img src={redCar} alt="Chosed car" className="car-image" />
+        <img src={finalImages[color.id-1]} alt="Chosed car" className="car-image" />
       </div>
       <div className="section detail-section">
         <div className="text">
@@ -17,27 +17,27 @@ const ResultBody = () =>
         </div>
         <div className="row">
           <p className="label">Starting price</p>
-          <span className="value">$63.000</span>
+          <span className="value">{price}</span>
         </div>
         <hr className="spacer" />
         <div className="row">
-          <p className="label">75 P - 75 KWh - 275 miles range</p>
-          <span className="value">+ $5.500</span>
+          <p className="label">{engine.kwh}</p>
+          <span className="value">{engine.price}</span>
         </div>
         <div className="row">
-          <p className="label">Metallic Vermilion Paint</p>
-          <span className="value">Included</span>
+          <p className="label">{color.label}</p>
+          <span className="value">{color.price}</span>
         </div>
         <div className="row">
-          <p className="label">22” Performance Carbon</p>
-          <span className="value">+ $2.000</span>
+          <p className="label">{wheels.label}</p>
+          <span className="value">{wheels.price}</span>
         </div>
         <hr className="spacer" />
         <div className="row total">
           <p className="label">Final Price</p>
-          <span className="value">$71.000</span>
+          <span className="value">{total}</span>
         </div>
-        <div className="redo">
+        <div className="redo" onClick={onRebuild}>
           <ButtonRedo to="/engine">Rebuild</ButtonRedo>
         </div>
       </div>
