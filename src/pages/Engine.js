@@ -7,15 +7,9 @@ import NavBar from 'components/NavBar/NavBar'
 import EngineBody from 'components/EngineBody/EngineBody'
 import Footer from 'components/Footer/Footer'
 
-
 class Engine extends Component {
 
-  state = { engineSelected: 1 }
-
-  onSelectEngine = engineSelected => {
-    this.setState({ engineSelected })
-    this.props.setEngine(engineSelected)
-  }
+  onSelectEngine = engineSelected => this.props.setEngine(engineSelected)
 
   render = () => {
     const { engine, selectedEngine } = this.props.carData

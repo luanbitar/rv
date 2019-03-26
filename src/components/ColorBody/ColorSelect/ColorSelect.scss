@@ -5,6 +5,8 @@ $size: 30px;
 :local(.container) {
   border-radius: 50%;
   border: 5px solid rgba(112, 112, 112, 0.0916);
+  @include transition;
+  cursor: pointer;
   &, .color-option{
     width: $size;
     height: $size;

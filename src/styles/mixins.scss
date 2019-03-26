@@ -22,6 +22,10 @@
   align-items: center;
 }
 
+@mixin transition {
+  transition: all .2s ease-in;
+}
+
 .parent__limit-container {
   display: flex;
   @include flex-center;
