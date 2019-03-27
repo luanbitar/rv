@@ -1,7 +1,6 @@
-import initialState from './initialState'
-import { SET_LOADING } from './actions'
+export const SET_LOADING = 'SET_LOADING'
 
-export default (state = initialState, { type, isLoading, key }) => {
+export default (state = {}, { type, isLoading, key }) => {
   switch (type) {
     case SET_LOADING:
       let copy = { ...state } || {}

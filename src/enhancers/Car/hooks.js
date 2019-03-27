@@ -3,10 +3,11 @@ import setDisplayName from 'recompose/setDisplayName'
 import lifecycle from 'recompose/lifecycle'
 
 export default compose(
-  setDisplayName('/src/enhancers/Engine/hooks.js'),
+  setDisplayName('/src/enhancers/Car/hooks.js'),
   lifecycle({
     componentDidMount() {
-      this.props.getCarData()
+      const { getCarData, carData } = this.props
+      if(!carData.price) getCarData()
     }
   })
 )

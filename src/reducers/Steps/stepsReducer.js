@@ -1,12 +1,19 @@
-import { TOOK_A_STEP, RESET_SELECTIONS } from './actions'
+import { TOOK_A_STEP, SET_STEP_VALUE, RESET_SELECTIONS } from './actions'
 import initialState from './initialState'
 
-export default (state = initialState, action) => {
-  switch (action.type) {
+export default (state = initialState, { type, step, value }) => {
+  switch (type) {
     case TOOK_A_STEP:
       return {
         ...state,
-        currentStep: action.step
+        currentStep: step
+      }
+    case SET_STEP_VALUE:
+      let copy = { ...state } || {}
+      copy[step] = value
+      return {
+        ...state,
+        ...copy
       }
     case RESET_SELECTIONS:
       return {

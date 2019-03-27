@@ -1,4 +1,6 @@
-import { compose, setDisplayName, withProps } from 'recompose'
+import compose from 'recompose/compose'
+import setDisplayName from 'recompose/setDisplayName'
+import withProps from 'recompose/withProps'
 import * as R from 'ramda'
 
 import { enginesImages } from 'utils/images'

@@ -8,7 +8,6 @@ TODO:
   - Redirect to home when does't have data
   - Change image key of json to files
   - Change selectedOptions to Steps reducer
-  - Hover on color selection
 
 Obs: 
   - Engine images its the same
