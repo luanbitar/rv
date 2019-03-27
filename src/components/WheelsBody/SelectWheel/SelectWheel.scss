@@ -3,10 +3,14 @@
 :local(.container) {
   opacity: 0.5;
   @include transition;
-  transform: scale(0.8);
   cursor: pointer;
   &.active {
-    transform: scale(1);
+    .wheel {
+      transform: scale(1);
+      &:hover {
+        transform: scale(1.01);
+      }
+    }
     opacity: 1;
   }
   .name, .price {
@@ -25,6 +29,11 @@
   .wheel {
     width: 265px;
     height: auto;
+    transform: scale(0.8);
+    @include transition;
+    &:hover {
+      transform: scale(0.85);
+    }
     @include mq(mobile) {
       width: 200px;
       height: auto;

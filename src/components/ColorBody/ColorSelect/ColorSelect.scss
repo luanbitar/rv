@@ -7,12 +7,18 @@ $size: 30px;
   border: 5px solid rgba(112, 112, 112, 0.0916);
   @include transition;
   cursor: pointer;
+  &:hover {
+    transform: scale(1.2);
+  }
   &, .color-option{
     width: $size;
     height: $size;
     transform: scale(1.05);
   }
   &.active {
+    &:hover {
+      transform: scale(1.05);
+    }
     border-color: $blue;
   }
 }
