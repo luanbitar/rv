@@ -7,7 +7,6 @@ import Footer from './Footer'
 class FooterContainer extends Component {
 
   render = () => {
-    console.log(this.props)
     const { to, currentStep } = this.props,
           { selectedEngine, engine, price,
             selectedColor, color,
