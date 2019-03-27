@@ -1,9 +1,12 @@
 import { compose, setDisplayName } from 'recompose'
 
-import CarEnhancer from '../Car/'
+import data from './data'
+import propsMapper from './propsMapper'
+import hooks from './hooks'
 
 export default compose(
-  setDisplayName('/.../'),
-  CarEnhancer,
-  handler
+  setDisplayName('/src/enhancers/Engine/index.js'),
+  data,
+  hooks,
+  propsMapper
 )

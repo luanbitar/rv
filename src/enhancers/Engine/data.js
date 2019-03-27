@@ -14,6 +14,6 @@ const mapDispatchToProps = dispatch => ({
 })
 
 export default compose(
-  setDisplayName('/src/enhancers/Car/data.js'),
+  setDisplayName('/src/enhancers/Engine/data.js'),
   connect(mapStateToProps, mapDispatchToProps)
 )
