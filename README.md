@@ -1,7 +1,9 @@
 O uso de :local permite a criação de scoped style, evitando sobreposição de estilos indesejáveis.
 
-Implementar um botão de voltar seria uma melhoria na UX
+TODO: 
+  - Animations on menu
+  - Redirect to home when does't have data
 
-Animations on menu
-
-Obs: Engine images its the same
+Obs: 
+  - Engine images its the same
+  - Back button it's an UX improvement
