@@ -1,11 +1,11 @@
 import React from 'react'
 
+import EngineEnhancer from 'enhancers/Engine'
 import body from 'styles/body-select.scss'
 import local from './EngineBody.scss'
 import EngineSelect from './EngineSelect/EngineSelect'
-import { enginesImages } from 'utils/images'
 
-const EngineBody = ({ onSelectEngine, engines, selectedEngine, engineSrc }) => 
+const EngineBody = ({ setEngine, engines, selectedEngine, engineSrc }) => 
   <div className={`${body.container} ${local.container} parent__limit-container`}>
     <div className="limit-container">
       <div className="section car-section">
@@ -16,7 +16,7 @@ const EngineBody = ({ onSelectEngine, engines, selectedEngine, engineSrc }) =>
           <h1 className="title">Engine</h1>
         </div>
         {engines.map(({ id, kwh, type, range, price }) => 
-          <div className="engine-select" onClick={() => onSelectEngine(id)} key={id}>
+          <div className="engine-select" onClick={() => setEngine(id)} key={id}>
             <EngineSelect kwh={kwh} type={type} range={range} price={price} active={id === selectedEngine} />
           </div>
         )}
@@ -24,4 +24,4 @@ const EngineBody = ({ onSelectEngine, engines, selectedEngine, engineSrc }) =>
     </div>
   </div>
 
-export default EngineBody
+export default EngineEnhancer(EngineBody)

@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { setWheels } from 'reducers/Car/actionCreators'
-import { tookAStep } from 'reducers/Steps/actionCreators'
+import { setWheels } from 'reducers/Car/'
+import { tookAStep } from 'reducers/Steps/'
 import NavBar from 'components/NavBar/NavBar'
 import WheelsBody from 'components/WheelsBody/WheelsBody'
 import FooterContainer from 'components/Footer/FooterContainer'

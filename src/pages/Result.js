@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { resetSelection as resetOptions } from 'reducers/Car/actionCreators'
-import { resetSelections as resetSteps } from 'reducers/Steps/actionCreators'
+import { resetSelection as resetOptions } from 'reducers/Car/'
+import { resetSelections as resetSteps } from 'reducers/Steps/'
 
 import NavBar from 'components/NavBar/NavBar'
 import ResultBody from 'components/ResultBody/ResultBody'

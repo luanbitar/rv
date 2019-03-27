@@ -1,14 +1,15 @@
-import { compose, setDisplayName } from 'recompose'
+import compose from 'recompose/compose'
+import setDisplayName from 'recompose/setDisplayName'
 import { connect } from 'react-redux'
 
-import { setEngine, setCarData } from 'reducers/Car/actionCreators'
-import { tookAStep } from 'reducers/Steps/actionCreators'
-import { fetchData } from 'utils/fetch'
+import { setEngine } from 'reducers/Car/'
+import { tookAStep } from 'reducers/Steps/'
+import { getCarData } from 'utils/fetch'
 
 const mapStateToProps = state => ({ carData: state.carReducer })
 
 const mapDispatchToProps = dispatch => ({
-  getCarData: () => fetchData().then(({ data }) => dispatch(setCarData(data))),
+  getCarData: () => getCarData(dispatch),
   setEngine: id => dispatch(setEngine(id)),
   tookAStep: step => dispatch(tookAStep(step))
 })

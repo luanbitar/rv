@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { setColor } from 'reducers/Car/actionCreators'
-import { tookAStep } from 'reducers/Steps/actionCreators'
+import { setColor } from 'reducers/Car/'
+import { tookAStep } from 'reducers/Steps/'
 import NavBar from 'components/NavBar/NavBar'
 import ColorBody from 'components/ColorBody/ColorBody'
 import FooterContainer from 'components/Footer/FooterContainer'
