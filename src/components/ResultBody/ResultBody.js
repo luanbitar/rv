@@ -5,6 +5,7 @@ import local from './ResultBody.scss'
 
 import ResultEnhancer from 'enhancers/Result'
 import ButtonRedo from 'components/ButtonRedo/ButtonRedo'
+import { isIncluded } from 'utils/numeral'
 
 const ResultBody = ({ price, engine, color, wheels, total, carSrc, resetSteps }) => 
   <div className={`${body.container} ${local.container} parent__limit-container`}>
@@ -18,25 +19,25 @@ const ResultBody = ({ price, engine, color, wheels, total, carSrc, resetSteps })
         </div>
         <div className="row">
           <p className="label">Starting price</p>
-          <span className="value">${price}</span>
+          <span className="value">{isIncluded(price, false)}</span>
         </div>
         <hr className="spacer" />
         <div className="row">
           <p className="label">{engine.kwh}</p>
-          <span className="value">{engine.price}</span>
+          <span className="value">{isIncluded(engine.price)}</span>
         </div>
         <div className="row">
           <p className="label">{color.label}</p>
-          <span className="value">{color.price}</span>
+          <span className="value">{isIncluded(color.price)}</span>
         </div>
         <div className="row">
           <p className="label">{wheels.label}</p>
-          <span className="value">{wheels.price}</span>
+          <span className="value">{isIncluded(wheels.price)}</span>
         </div>
         <hr className="spacer" />
         <div className="row total">
           <p className="label">Final Price</p>
-          <span className="value">${total}</span>
+          <span className="value">{isIncluded(total, false)}</span>
         </div>
         <div className="redo" onClick={() => resetSteps()}>
           <ButtonRedo to="/engine">Rebuild</ButtonRedo>

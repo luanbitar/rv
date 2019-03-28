@@ -4,7 +4,6 @@ import withProps from 'recompose/withProps'
 import * as R from 'ramda'
 
 import { cars } from 'utils/images'
-import { isIncluded } from 'utils/numeral'
 
 export default compose(
   setDisplayName('/src/enhancers/Color/propsMapper.js'),
@@ -17,7 +16,6 @@ export default compose(
       carSrc = cars[selectedColor-1],
       label = R.prop('label', currentColor)
     let price = R.prop('price', currentColor)
-    price = isIncluded(price)
 
     return {
       ...props,

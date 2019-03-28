@@ -5,6 +5,7 @@ import local from './ColorBody.scss'
 import ColorSelect from './ColorSelect/ColorSelect'
 import ColorEnhancer from 'enhancers/Color'
 import { dots } from 'utils/images'
+import { isIncluded } from 'utils/numeral'
 
 const ColorBody = ({ description, colors, carSrc, label, price, selected, selectedColor }) => 
   <div className={`${body.container} ${local.container} parent__limit-container`}>
@@ -12,7 +13,7 @@ const ColorBody = ({ description, colors, carSrc, label, price, selected, select
       <div className="section car-section">
         <img src={carSrc} alt="Car without engine" className="car-image" />
         <h3 className="color">{label}</h3>
-        <p className="value">{price}</p>
+        <p className="value">{isIncluded(price)}</p>
       </div>
       <div className="section radio-section">
         <div className="text">

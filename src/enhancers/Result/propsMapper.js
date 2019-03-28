@@ -4,7 +4,6 @@ import withProps from 'recompose/withProps'
 import * as R from 'ramda'
 
 import { finalImages } from 'utils/images'
-import { isIncluded } from 'utils/numeral'
 
 export default compose(
   setDisplayName('/src/enhancers/Result/propsMapper.js'),
@@ -23,9 +22,6 @@ export default compose(
       carSrc = finalImages[selectedColor-1],
       total = price + engine.price + color.price + wheels.price
 
-    engine.price = isIncluded(engine.price)
-    wheels.price = isIncluded(wheels.price)
-    color.price = isIncluded(color.price)
     return {
       ...props,
       total,
