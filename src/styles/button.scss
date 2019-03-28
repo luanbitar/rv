@@ -11,8 +11,28 @@
   letter-spacing: 5px;
   text-transform: uppercase;
   cursor: pointer;
-
+  &:hover {
+    .next-icon {
+      animation: next 1s infinite;
+    }
+    .rotate-icon {
+      animation: rotate 2s infinite;
+    }
+  }
   .icon {
     margin-left: 5px;
+    position: relative;
   }
+}
+
+@keyframes next {
+  0% { left: 0px; }
+  50% { left: 8px; }
+  100% { left: 0px; }
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  30% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
