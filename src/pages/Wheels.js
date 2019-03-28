@@ -2,10 +2,9 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import { setWheels } from 'reducers/Car/'
-import { tookAStep } from 'reducers/Steps/'
 import NavBar from 'components/NavBar/NavBar'
 import WheelsBody from 'components/WheelsBody/WheelsBody'
-import FooterContainer from 'components/Footer/FooterContainer'
+import Footer from 'components/Footer/Footer'
 
 class Wheels extends Component {
 
@@ -23,7 +22,7 @@ class Wheels extends Component {
           onSelectWheels={this.onSelectWheels}
           wheels={wheels.items}
           selectedWheels={selectedWheels} />
-        <FooterContainer to="/result" />
+        <Footer currentStep={3} to="/result" />
       </div>
     )
   }
@@ -32,8 +31,7 @@ class Wheels extends Component {
 const mapStateToProps = state => ({ carData: state.carReducer })
 
 const mapDispatchToProps = dispatch => ({
-  setWheels: id => dispatch(setWheels(id)),
-  tookAStep: step => dispatch(tookAStep(step))
+  setWheels: id => dispatch(setWheels(id))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Wheels)

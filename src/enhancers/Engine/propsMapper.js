@@ -8,9 +8,9 @@ import { enginesImages } from 'utils/images'
 export default compose(
   setDisplayName('/src/enhancers/Engine/propsMapper.js'),
   withProps((props) => {
-    const { carData } = props,
+    const { carData, steps } = props,
           engines = R.path(['engine', 'items'], carData),
-          selectedEngine = R.prop('selectedEngine', carData),
+          selectedEngine = R.prop('selectedEngine', steps),
           engineSrc = enginesImages[selectedEngine-1]
 
     return {

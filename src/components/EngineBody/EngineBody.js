@@ -5,7 +5,7 @@ import body from 'styles/body-select.scss'
 import local from './EngineBody.scss'
 import EngineSelect from './EngineSelect/EngineSelect'
 
-const EngineBody = ({ setEngine, engines, selectedEngine, engineSrc }) => 
+const EngineBody = ({ selected, engines, selectedEngine, engineSrc }) => 
   <div className={`${body.container} ${local.container} parent__limit-container`}>
     <div className="limit-container">
       <div className="section car-section">
@@ -16,7 +16,7 @@ const EngineBody = ({ setEngine, engines, selectedEngine, engineSrc }) =>
           <h1 className="title">Engine</h1>
         </div>
         {engines.map(({ id, kwh, type, range, price }) => 
-          <div className="engine-select" onClick={() => setEngine(id)} key={id}>
+          <div className="engine-select" onClick={() => selected('selectedEngine', id)} key={id}>
             <EngineSelect kwh={kwh} type={type} range={range} price={price} active={id === selectedEngine} />
           </div>
         )}

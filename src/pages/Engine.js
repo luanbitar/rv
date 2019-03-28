@@ -2,13 +2,13 @@ import React from 'react'
 
 import NavBar from 'components/NavBar/NavBar'
 import EngineBody from 'components/EngineBody/EngineBody'
-import FooterContainer from 'components/Footer/FooterContainer'
+import Footer from 'components/Footer/Footer'
 
 const Engine = () =>
   <div className="main--container">
     <NavBar />
     <EngineBody />
-    <FooterContainer to="/color" />
+    <Footer currentStep={1} to="/color" />
   </div>
 
 export default Engine

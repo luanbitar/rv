@@ -6,7 +6,7 @@ import StepsEnhancer from 'enhancers/Steps'
 import propsMapper from './propsMapper'
 
 export default compose(
-  setDisplayName('/src/enhancers/Engine/index.js'),
+  setDisplayName('/src/enhancers/Color/index.js'),
   CarEnhancer,
   StepsEnhancer,
   propsMapper

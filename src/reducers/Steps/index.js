@@ -1,9 +1,4 @@
-import { TOOK_A_STEP, SET_STEP_VALUE, RESET_SELECTIONS } from './actions'
-
-export const tookAStep = step => ({
-  type: TOOK_A_STEP,
-  step
-})
+import { SET_STEP_VALUE, RESET_SELECTIONS } from './actions'
 
 export const selected = (step, value) => ({
   type: SET_STEP_VALUE,
