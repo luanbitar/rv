@@ -2,14 +2,15 @@ import React from 'react'
 
 import body from 'styles/body-select.scss'
 import local from './ResultBody.scss'
-import { finalImages } from 'utils/images'
+
+import ResultEnhancer from 'enhancers/Result'
 import ButtonRedo from 'components/ButtonRedo/ButtonRedo'
 
-const ResultBody = ({ price, engine, color, wheels, total, onRebuild }) => 
+const ResultBody = ({ price, engine, color, wheels, total, carSrc, resetSteps }) => 
   <div className={`${body.container} ${local.container} parent__limit-container`}>
     <div className="limit-container">
       <div className="section car-section">
-        <img src={finalImages[color.id-1]} alt="Chosed car" className="car-image" />
+        <img src={carSrc} alt="Chosed car" className="car-image" />
       </div>
       <div className="section detail-section">
         <div className="text">
@@ -17,7 +18,7 @@ const ResultBody = ({ price, engine, color, wheels, total, onRebuild }) =>
         </div>
         <div className="row">
           <p className="label">Starting price</p>
-          <span className="value">{price}</span>
+          <span className="value">${price}</span>
         </div>
         <hr className="spacer" />
         <div className="row">
@@ -35,13 +36,13 @@ const ResultBody = ({ price, engine, color, wheels, total, onRebuild }) =>
         <hr className="spacer" />
         <div className="row total">
           <p className="label">Final Price</p>
-          <span className="value">{total}</span>
+          <span className="value">${total}</span>
         </div>
-        <div className="redo" onClick={onRebuild}>
+        <div className="redo" onClick={() => resetSteps()}>
           <ButtonRedo to="/engine">Rebuild</ButtonRedo>
         </div>
       </div>
     </div>
   </div>
 
-export default ResultBody
+export default ResultEnhancer(ResultBody)

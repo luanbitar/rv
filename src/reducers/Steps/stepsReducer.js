@@ -12,8 +12,7 @@ export default (state = initialState, { type, step, value }) => {
       }
     case RESET_SELECTIONS:
       return {
-        ...state,
-        currentStep: initialState.currentStep
+        ...initialState
       }
     
     default:

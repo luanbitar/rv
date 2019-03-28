@@ -1,4 +1,3 @@
-export const TOOK_A_STEP = 'TOOK_A_STEP'
 export const SET_STEP_VALUE = 'SET_STEP_VALUE'
 export const RESET_SELECTIONS = 'RESET_SELECTIONS'
 
