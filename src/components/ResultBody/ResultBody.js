@@ -5,13 +5,14 @@ import local from './ResultBody.scss'
 
 import ResultEnhancer from 'enhancers/Result'
 import ButtonRedo from 'components/ButtonRedo/ButtonRedo'
+import Loader from 'components/Loader/Loader'
 import { isIncluded } from 'utils/numeral'
 
-const ResultBody = ({ price, engine, color, wheels, total, carSrc, resetSteps, engineSelectedInfo }) => 
+const ResultBody = ({ price, engine, color, wheels, total, carSrc, resetSteps, engineSelectedInfo, isLoadingImage }) => 
   <div className={`${body.container} ${local.container} parent__limit-container`}>
     <div className="limit-container">
       <div className="section car-section">
-        <img src={carSrc} alt="Chosed car" className="car-image" />
+        {isLoadingImage ? <Loader /> : <img src={carSrc} alt="Chosed car" className="car-image" />}
       </div>
       <div className="section detail-section">
         <div className="text">

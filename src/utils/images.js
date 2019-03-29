@@ -45,7 +45,7 @@ export const blobToBase64 = blob =>
 
 export const isBase64 = b64 => /^([0-9a-zA-Z+/]{4})*(([0-9a-zA-Z+/]{2}==)|([0-9a-zA-Z+/]{3}=))?$/.test(b64.split(',')[1])
 
-export const getSelectedField = ({ carData, steps }, field, selectedField) => {
+export const getSelectedField = ({ carData, steps, field, selectedField }) => {
   const selected = R.prop(selectedField, steps),
     items = R.path([field, 'items'], carData)
   return {
@@ -54,7 +54,7 @@ export const getSelectedField = ({ carData, steps }, field, selectedField) => {
   }
 }
 
-export const changeImageStringFieldB64 = ({ carData, setCarData }, field) => 
+export const changeImageStringFieldB64 = ({ carData, setCarData, field }) => 
   new Promise(async res => {
     let items = R.path([field, 'items'], carData)
     items = items.map(async item => {

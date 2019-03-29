@@ -7,8 +7,8 @@ import Footer from 'components/Footer/Footer'
 const Color = () =>
   <div className="main--container">
     <NavBar />
-    <ColorBody />
-    <Footer currentStep={2} to="/wheels" />
+    <ColorBody field="color" selectedField="selectedColor"/>
+    <Footer currentStep={2} to="/wheels"/>
   </div>
 
 export default Color

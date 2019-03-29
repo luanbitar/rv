@@ -8,8 +8,8 @@ import data from './data'
 
 export default compose(
   setDisplayName('/src/enhancers/Result/index.js'),
-  CarEnhancer,
   StepsEnhancer,
+  CarEnhancer,
   data,
   propsMapper
 )

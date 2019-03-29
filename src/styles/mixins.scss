@@ -25,6 +25,12 @@
 @mixin transition {
   transition: all .2s ease-in;
 }
+@mixin size($width, $height) {
+  min-width: $width*1px;
+  max-width: $width*1px;
+  min-height: $height*1px;
+  max-height: $height*1px;
+}
 
 .parent__limit-container {
   display: flex;

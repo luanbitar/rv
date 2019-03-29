@@ -7,7 +7,7 @@ import propsMapper from './propsMapper'
 
 export default compose(
   setDisplayName('/src/enhancers/Wheels/index.js'),
-  CarEnhancer,
   StepsEnhancer,
+  CarEnhancer,
   propsMapper
 )

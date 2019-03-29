@@ -7,7 +7,7 @@ import Footer from 'components/Footer/Footer'
 const Wheels = () =>
   <div className="main--container">
     <NavBar />
-    <WheelsBody />
+    <WheelsBody field="wheels" selectedField="selectedWheels" />
     <Footer currentStep={3} to="/result" />
   </div>
 

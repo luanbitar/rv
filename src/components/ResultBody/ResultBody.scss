@@ -8,10 +8,10 @@
       padding-top: 6rem;
     }
 
-    .car-image {
-      width: 400px;
+    .car-image, .loader--container {
+      @include size(400, 205);
       @media (max-width: 500px) {
-        width: 320px;
+        @include size(320, 164);
       }
     }
   }

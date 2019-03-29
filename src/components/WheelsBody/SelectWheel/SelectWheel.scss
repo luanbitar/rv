@@ -5,7 +5,7 @@
   @include transition;
   cursor: pointer;
   &.active {
-    .wheel {
+    .wheel, .loader--container {
       transform: scale(1);
       &:hover {
         transform: scale(1.01);
@@ -26,17 +26,15 @@
     color: $red;
   }
 
-  .wheel {
-    width: 265px;
-    height: auto;
+  .wheel, .loader--container {
+    @include size(265, 206);
     transform: scale(0.8);
     @include transition;
     &:hover {
       transform: scale(0.85);
     }
     @include mq(mobile) {
-      width: 200px;
-      height: auto;
+      @include size(200, 155);
     }
   }
 }

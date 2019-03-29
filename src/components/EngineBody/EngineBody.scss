@@ -1,14 +1,14 @@
 @import "styles/mixins.scss";
 
 :local(.container) {
-  .car-image {
-    height: 500px;
+  .car-image, .loader--container {
+    @include size(273, 500);
     @include mq(mobile) {
       transform: rotate(-90deg);
-      height: 360px;
+      @include size(196, 360);
     }
     @media (max-width: 360px) {
-      height: 320px;
+      @include size(175, 320);
     }
   }
   .limit-container .section.radio-section {
@@ -19,6 +19,13 @@
       margin-bottom: 3rem;
       @include mq(mobile) {
         margin-bottom: 2rem;
+      }
+    }
+    .loader--container {
+      max-width: unset;
+      min-height: 360px;
+      @include mq(mobile) {
+        min-height: 120px;
       }
     }
   }

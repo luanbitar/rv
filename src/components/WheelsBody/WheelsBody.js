@@ -4,7 +4,7 @@ import s from './WheelsBody.scss'
 import SelectWheel from 'components/WheelsBody/SelectWheel/SelectWheel'
 import WheelsEnhancer from 'enhancers/Wheels'
 
-const WheelsBody = ({ selected, wheels, selectedWheels }) => 
+const WheelsBody = ({ selected, wheels, selectedWheels, isLoadingImage }) => 
   <div className={`${s.container} parent__limit-container`}>
     <div className="limit-container">
       <h1 className="title">Wheels</h1>
@@ -15,6 +15,7 @@ const WheelsBody = ({ selected, wheels, selectedWheels }) =>
             src={image}
             label={label}
             price={price}
+            isLoadingImage={isLoadingImage}
             active={id === selectedWheels} />
         </div>
       )}

@@ -6,7 +6,7 @@ import ResultBody from 'components/ResultBody/ResultBody'
 const Result = () =>
   <div className="main--container">
     <NavBar />
-    <ResultBody />
+    <ResultBody field="results" selectedField="selectedColor" />
   </div>
 
 export default Result

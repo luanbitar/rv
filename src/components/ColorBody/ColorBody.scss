@@ -20,10 +20,10 @@
       padding-top: 10rem;
     }
 
-    .car-image {
-      width: 400px;
+    .car-image, .loader--container {
+      @include size(400, 240);
       @media (max-width: 500px) {
-        width: 320px;
+        @include size(320, 191);
       }
     }
     .color, .value {

@@ -7,7 +7,7 @@ import Footer from 'components/Footer/Footer'
 const Engine = () =>
   <div className="main--container">
     <NavBar />
-    <EngineBody />
+    <EngineBody field="engine" selectedField="selectedEngine" />
     <Footer currentStep={1} to="/color" />
   </div>
 
