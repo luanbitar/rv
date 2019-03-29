@@ -7,7 +7,7 @@ import ResultEnhancer from 'enhancers/Result'
 import ButtonRedo from 'components/ButtonRedo/ButtonRedo'
 import { isIncluded } from 'utils/numeral'
 
-const ResultBody = ({ price, engine, color, wheels, total, carSrc, resetSteps }) => 
+const ResultBody = ({ price, engine, color, wheels, total, carSrc, resetSteps, engineSelectedInfo }) => 
   <div className={`${body.container} ${local.container} parent__limit-container`}>
     <div className="limit-container">
       <div className="section car-section">
@@ -23,7 +23,7 @@ const ResultBody = ({ price, engine, color, wheels, total, carSrc, resetSteps })
         </div>
         <hr className="spacer" />
         <div className="row">
-          <p className="label">{engine.kwh}</p>
+          <p className="label">{engineSelectedInfo}</p>
           <span className="value">{isIncluded(engine.price)}</span>
         </div>
         <div className="row">

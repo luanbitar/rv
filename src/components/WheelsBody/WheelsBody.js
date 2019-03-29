@@ -2,7 +2,6 @@ import React from 'react'
 
 import s from './WheelsBody.scss'
 import SelectWheel from 'components/WheelsBody/SelectWheel/SelectWheel'
-import { wheelsImages } from 'utils/images'
 import WheelsEnhancer from 'enhancers/Wheels'
 
 const WheelsBody = ({ selected, wheels, selectedWheels }) => 
@@ -10,10 +9,10 @@ const WheelsBody = ({ selected, wheels, selectedWheels }) =>
     <div className="limit-container">
       <h1 className="title">Wheels</h1>
       <div className={`wheels selected${selectedWheels-1}`}>
-      {wheels.map(({ id, label, price }) => 
+      {wheels.map(({ id, label, price, image }) => 
         <div onClick={() => selected('selectedWheels', id)} key={id}>
           <SelectWheel
-            src={wheelsImages[id-1]}
+            src={image}
             label={label}
             price={price}
             active={id === selectedWheels} />

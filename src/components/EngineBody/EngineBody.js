@@ -4,12 +4,13 @@ import EngineEnhancer from 'enhancers/Engine'
 import body from 'styles/body-select.scss'
 import local from './EngineBody.scss'
 import EngineSelect from './EngineSelect/EngineSelect'
+import Loader from 'components/Loader/Loader'
 
-const EngineBody = ({ selected, engines, selectedEngine, engineSrc }) => 
+const EngineBody = ({ selected, engines, selectedEngine, engineSrc, isLoadingImage }) => 
   <div className={`${body.container} ${local.container} parent__limit-container`}>
     <div className="limit-container">
       <div className="section car-section">
-        <img src={engineSrc} alt="Car without engine" className="car-image" />
+        {isLoadingImage ? <Loader /> : <img src={engineSrc} alt="Car without engine" className="car-image" />}
       </div>
       <div className="section radio-section">
         <div className="text">

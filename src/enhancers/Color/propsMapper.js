@@ -3,8 +3,6 @@ import setDisplayName from 'recompose/setDisplayName'
 import withProps from 'recompose/withProps'
 import * as R from 'ramda'
 
-import { cars } from 'utils/images'
-
 export default compose(
   setDisplayName('/src/enhancers/Color/propsMapper.js'),
   withProps((props) => {
@@ -13,7 +11,7 @@ export default compose(
       colors = R.path(['color', 'items'], carData),
       selectedColor = R.prop('selectedColor', steps),
       currentColor = colors[selectedColor-1],
-      carSrc = cars[selectedColor-1],
+      carSrc = colors[selectedColor-1].image,
       label = R.prop('label', currentColor)
     let price = R.prop('price', currentColor)
 

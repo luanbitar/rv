@@ -12,6 +12,7 @@ export default compose(
       engines = R.path(['engine', 'items'], carData),
       colors = R.path(['color', 'items'], carData),
       wheelsItems = R.path(['wheels', 'items'], carData),
+      results = R.path(['results', 'items'], carData),
       price = R.prop('price', carData),
       selectedColor = R.prop('selectedColor', steps),
       selectedEngine = R.prop('selectedEngine', steps),
@@ -19,7 +20,8 @@ export default compose(
       engine = engines[selectedEngine-1],
       color = colors[selectedColor-1],
       wheels = wheelsItems[selectedWheels-1],
-      carSrc = finalImages[selectedColor-1],
+      carSrc = R.prop('image', results[selectedColor-1]),
+      engineSelectedInfo = `${engine.kwh} ${engine.type} - ${engine.kwh} kWh - ${engine.range} miles range`,
       total = price + engine.price + color.price + wheels.price
 
     return {
@@ -29,7 +31,8 @@ export default compose(
       carSrc,
       color,
       wheels,
-      price
+      price,
+      engineSelectedInfo
     }
   })
 )
