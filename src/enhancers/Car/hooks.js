@@ -5,9 +5,9 @@ import lifecycle from 'recompose/lifecycle'
 export default compose(
   setDisplayName('/src/enhancers/Car/hooks.js'),
   lifecycle({
-    componentDidMount() {
+    async componentDidMount() {
       const { getCarData, carData } = this.props
-      if(!carData.price) getCarData()
+      if(!carData.price) await getCarData()
     }
   })
 )

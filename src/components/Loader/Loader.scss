@@ -6,6 +6,7 @@
   width: 64px;
   height: 64px;
   transform: scale(0.5);
+  margin: 0 auto;
 }
 :local(.container) div {
   animation: spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;

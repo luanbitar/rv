@@ -6,12 +6,13 @@ import ColorSelect from './ColorSelect/ColorSelect'
 import ColorEnhancer from 'enhancers/Color'
 import { dots } from 'utils/images'
 import { isIncluded } from 'utils/numeral'
+import Loader from 'components/Loader/Loader'
 
-const ColorBody = ({ description, colors, carSrc, label, price, selected, selectedColor }) => 
+const ColorBody = ({ description, colors, carSrc, label, price, selected, selectedColor, isLoadingImage }) => 
   <div className={`${body.container} ${local.container} parent__limit-container`}>
     <div className="limit-container">
       <div className="section car-section">
-        <img src={carSrc} alt="Car without engine" className="car-image" />
+        {isLoadingImage ? <Loader /> : <img src={carSrc} alt="Car without engine" className="car-image" />}
         <h3 className="color">{label}</h3>
         <p className="value">{isIncluded(price)}</p>
       </div>

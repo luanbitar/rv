@@ -3,8 +3,6 @@ import setDisplayName from 'recompose/setDisplayName'
 import withProps from 'recompose/withProps'
 import * as R from 'ramda'
 
-import { finalImages } from 'utils/images'
-
 export default compose(
   setDisplayName('/src/enhancers/Result/propsMapper.js'),
   withProps((props) => {

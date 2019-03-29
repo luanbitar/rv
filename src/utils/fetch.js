@@ -1,5 +1,4 @@
 import { setCarData } from 'reducers/Car/'
-import { isLoading } from 'reducers/Loadings'
 
 import { changeImageFieldToLocalPath } from 'utils/carData'
 
@@ -10,13 +9,10 @@ export const fetchData = async (url = apiUrl) =>
   
 export const getCarData = async dispatch => {
 
-  dispatch(isLoading(true, 'car'))
   const { data } = await fetchData()
   
   // change image URL's to local path with minified png's
   const dataWithLocalPaths = changeImageFieldToLocalPath(data)
 
-  console.log(dataWithLocalPaths)
   dispatch(setCarData(dataWithLocalPaths))
-  dispatch(isLoading(false, 'car'))
 }

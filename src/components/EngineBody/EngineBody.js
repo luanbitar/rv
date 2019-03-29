@@ -16,7 +16,7 @@ const EngineBody = ({ selected, engines, selectedEngine, engineSrc, isLoadingIma
         <div className="text">
           <h1 className="title">Engine</h1>
         </div>
-        {engines.map(({ id, kwh, type, range, price }) => 
+        {isLoadingImage ? <Loader className="engine-select" /> : engines.map(({ id, kwh, type, range, price }) => 
           <div className="engine-select" onClick={() => selected('selectedEngine', id)} key={id}>
             <EngineSelect kwh={kwh} type={type} range={range} price={price} active={id === selectedEngine} />
           </div>

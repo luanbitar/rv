@@ -6,15 +6,16 @@ import * as R from 'ramda'
 import { isBase64, getSelectedField, changeImageStringFieldB64 } from 'utils/images'
 
 export default compose(
-  setDisplayName('/src/enhancers/Engine/hooks.js'),
+  setDisplayName('/src/enhancers/Color/hooks.js'),
   lifecycle({
     async componentDidUpdate(prevProps) {
       if(prevProps !== this.props) {
-        const engine = getSelectedField(this.props, 'engine', 'selectedEngine')
-        const image = R.path(['item', 'image'], engine)
+        const color = getSelectedField(this.props, 'color', 'selectedColor')
+        const image = R.path(['item', 'image'], color)
         if(image && !isBase64(image) && !this.props.isLoadingImage) {
+          console.log('change')
           this.props.setLoadingImage(true)
-          await changeImageStringFieldB64(this.props, 'engine')
+          await changeImageStringFieldB64(this.props, 'color')
           this.props.setLoadingImage(false)
         }
       }

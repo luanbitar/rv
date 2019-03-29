@@ -6,7 +6,7 @@ import * as R from 'ramda'
 export default compose(
   setDisplayName('/src/enhancers/Engine/propsMapper.js'),
   withProps((props) => {
-    const { carData, steps } = props,
+    const { carData, steps, isLoadingImage } = props,
       engines = R.path(['engine', 'items'], carData),
       selectedEngine = R.prop('selectedEngine', steps),
       engineSrc = engines[selectedEngine-1].image
@@ -15,7 +15,8 @@ export default compose(
       ...props,
       engines,
       selectedEngine,
-      engineSrc
+      engineSrc,
+      isLoadingImage: isLoadingImage || !engineSrc
     }
   })
 )

@@ -6,7 +6,7 @@ import * as R from 'ramda'
 export default compose(
   setDisplayName('/src/enhancers/Color/propsMapper.js'),
   withProps((props) => {
-    const { carData, steps } = props,
+    const { carData, steps, isLoadingImage } = props,
       description = R.path(['color', 'description'], carData),
       colors = R.path(['color', 'items'], carData),
       selectedColor = R.prop('selectedColor', steps),
@@ -22,7 +22,8 @@ export default compose(
       carSrc,
       label,
       price,
-      selectedColor
+      selectedColor,
+      isLoadingImage: isLoadingImage || !carSrc
     }
   })
 )
