@@ -6,7 +6,8 @@ $mb-offset: 160px;
 :local(.container).parent__limit-container {
   flex: 1;
   padding: 0;
-
+  @include padding-bars;
+  
   .limit-container {
     justify-content: center;
     flex-direction: column;

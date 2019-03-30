@@ -1,6 +1,8 @@
 @import "styles/mixins.scss";
 
-:local(.container) {
+:local(.container).parent__limit-container {
+  @include padding-bars;
+  padding-bottom: 0;
   .limit-container .section.car-section{
     justify-content: flex-start;
     @include mq(mobile) {
@@ -8,10 +10,10 @@
       padding-top: 6rem;
     }
 
-    .car-image {
-      width: 400px;
+    .car-image, .loader--container {
+      @include size(400, 205);
       @media (max-width: 500px) {
-        width: 320px;
+        @include size(320, 164);
       }
     }
   }
@@ -52,6 +54,10 @@
 
       .label, .value {
         margin: 0;
+        font-size: 1.2rem;
+        @include mq(mobile) {
+          font-size: 1rem;
+        }
       }
 
       .label {

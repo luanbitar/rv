@@ -1,4 +1,6 @@
-export default {
+import { getItem } from 'utils/localStorage'
+
+export default getItem('carData') || {
   price: 0,
   engine: {
     items: [
@@ -41,8 +43,5 @@ export default {
         image: ""
       }
     ]
-  },
-  selectedEngine: 1,
-  selectedColor: 1,
-  selectedWheels: 1,
+  }
 }

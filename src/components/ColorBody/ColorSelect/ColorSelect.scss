@@ -1,18 +1,25 @@
 @import "styles/mixins.scss";
 
 $size: 30px;
+$border-disabled-grey: rgba(112, 112, 112, 0.0916);
 
 :local(.container) {
   border-radius: 50%;
-  border: 5px solid rgba(112, 112, 112, 0.0916);
+  border: 5px solid $border-disabled-grey;
   @include transition;
   cursor: pointer;
+  &:hover {
+    transform: scale(1.2);
+  }
   &, .color-option{
     width: $size;
     height: $size;
     transform: scale(1.05);
   }
   &.active {
+    &:hover {
+      transform: scale(1.07);
+    }
     border-color: $blue;
   }
 }

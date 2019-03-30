@@ -5,5 +5,5 @@ import stepsReducer from 'reducers/Steps/stepsReducer'
 
 export default combineReducers({
   carReducer,
-  stepsReducer
+  stepsReducer,
 })

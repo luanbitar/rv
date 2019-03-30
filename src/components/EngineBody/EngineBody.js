@@ -1,27 +1,28 @@
 import React from 'react'
 
+import EngineEnhancer from 'enhancers/Engine'
 import body from 'styles/body-select.scss'
 import local from './EngineBody.scss'
 import EngineSelect from './EngineSelect/EngineSelect'
-import { enginesImages } from 'utils/images'
+import Loader from 'components/Loader/Loader'
 
-const EngineBody = ({ onSelectEngine, engines, selectedEngine }) => 
+const EngineBody = ({ selected, engines, selectedEngine, engineSrc, isLoadingImage }) => 
   <div className={`${body.container} ${local.container} parent__limit-container`}>
     <div className="limit-container">
       <div className="section car-section">
-        <img src={enginesImages[selectedEngine-1]} alt="Car without engine" className="car-image" />
+        {isLoadingImage ? <Loader /> : <img src={engineSrc} alt="Car without engine" className="car-image" />}
       </div>
       <div className="section radio-section">
         <div className="text">
           <h1 className="title">Engine</h1>
         </div>
-        {engines.map(engine => 
-          <div className="engine-select" onClick={() => onSelectEngine(engine.id)} key={engine.id}>
-            <EngineSelect kwh={engine.kwh} type={engine.type} range={engine.range} price={engine.price} active={engine.id === selectedEngine} />
+        {isLoadingImage ? <Loader /> : engines.map(({ id, kwh, type, range, price }) => 
+          <div className="engine-select" onClick={() => selected('selectedEngine', id)} key={id}>
+            <EngineSelect kwh={kwh} type={type} range={range} price={price} active={id === selectedEngine} />
           </div>
         )}
       </div>
     </div>
   </div>
 
-export default EngineBody
+export default EngineEnhancer(EngineBody)

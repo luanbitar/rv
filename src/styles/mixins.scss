@@ -25,6 +25,29 @@
 @mixin transition {
   transition: all .2s ease-in;
 }
+@mixin size($width, $height) {
+  min-width: $width*1px;
+  max-width: $width*1px;
+  min-height: $height*1px;
+  max-height: $height*1px;
+}
+
+@mixin fixed {
+  position: fixed;
+  left: 0;
+  background: $white;
+  min-width: 100vw;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+@mixin padding-bars {
+  padding-top: $navbar-height;
+  padding-bottom: $footer-height;
+  @include mq(mobile) {
+    padding-top: $navbar-height-mb;
+  }
+}
 
 .parent__limit-container {
   display: flex;

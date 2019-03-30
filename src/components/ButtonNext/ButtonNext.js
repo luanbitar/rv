@@ -7,7 +7,7 @@ import ArrowRight from 'images/arrow.svg'
 const ButtonNext = ({ to, children }) => 
   <Link className={s.container} to={to}>
     {children}
-    <img className="icon" src={ArrowRight} alt="Arrow right" />
+    <img className="icon next-icon" src={ArrowRight} alt="Arrow right" />
   </Link>
 
 export default ButtonNext
