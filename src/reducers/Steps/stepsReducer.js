@@ -12,7 +12,9 @@ export default (state = initialState, { type, step, value }) => {
       }
     case RESET_SELECTIONS:
       return {
-        ...initialState
+        selectedEngine: 1,
+        selectedColor: 1,
+        selectedWheels: 1
       }
     
     default:
