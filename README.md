@@ -1,13 +1,24 @@
-O uso de :local permite a criação de scoped style, evitando sobreposição de estilos indesejáveis.
-Talk about recompose
-Links to recompose, brjs video and repo
+## Red Ventures - Luan Bitar
 
-Obs: 
-  - Engine images its the same
-  - Back button it's an UX improvement
-  - Color of navbar doesn't have sufficient contrast with background on disabled items
+Customizing a car
+Available at: <https://redventures-luan.bitar.now.sh/>
 
-Plus: 
-  - StoryBook out Testes automatizados 
-  - Critical Path 
-  - Configurar o próprio webpack partindo de uma básico já
+### Installing
+ 
+``
+npm i && npm start
+``
+
+### Built With
+
+- [React JS](https://reactjs.org/) - Framework
+- [Recompose](https://github.com/acdlite/recompose) - React utility belt
+- [SCSS](https://sass-lang.com/) - Style pre-processor
+
+### Description
+
+I did not used the BEM CSS methodology, because I took advantage of `:local()` use, which provides classes generated with hashes, making available scoped styles. When a whatched [this talk](https://www.youtube.com/watch?v=DTI5ojWBrW0&t=19965s) about [recompose](https://github.com/acdlite/recompose), presented by Milson Junior, I started to learning and use this approach with 5 layers of logic, which had very positive return in terms of code structure, readability and maintenance.
+
+### Comments
+
+Some images do not have exact pixel placement, causing a slight distortion when state changes. A back button would be an improvement of UX. Color of navbar text doesn't have sufficient contrast with background on disabled items.
