@@ -2,8 +2,11 @@
 
 $icon-size: 20px;
 
-:local(.container) {
+:local(.container).parent__limit-container {
   box-shadow: 8px 0px 47px rgba(0, 0, 0, 0.076002);
+  @include fixed;
+  bottom: 0;
+  height: $footer-height;
   .limit-container {
     justify-content: space-between;
     align-items: center;

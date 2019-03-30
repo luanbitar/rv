@@ -1,6 +1,7 @@
 @import "styles/mixins.scss";
 
-:local(.container) {
+:local(.container).parent__limit-container {
+  @include padding-bars;
   .car-image, .loader--container {
     @include size(273, 500);
     @include mq(mobile) {

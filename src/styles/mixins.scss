@@ -32,6 +32,23 @@
   max-height: $height*1px;
 }
 
+@mixin fixed {
+  position: fixed;
+  left: 0;
+  background: $white;
+  min-width: 100vw;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+@mixin padding-bars {
+  padding-top: $navbar-height;
+  padding-bottom: $footer-height;
+  @include mq(mobile) {
+    padding-top: $navbar-height-mb;
+  }
+}
+
 .parent__limit-container {
   display: flex;
   @include flex-center;

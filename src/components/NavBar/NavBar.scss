@@ -1,8 +1,9 @@
 @import "styles/mixins.scss";
 
-:local(.container) {
+:local(.container).parent__limit-container {
+  @include fixed;
   height: 100px;
-  
+  top: 0;
   @include mq(mobile) {
     height: 70px;
   }

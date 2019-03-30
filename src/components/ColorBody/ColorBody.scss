@@ -1,6 +1,7 @@
 @import "styles/mixins.scss";
 
-:local(.container) {
+:local(.container).parent__limit-container {
+  @include padding-bars;
   .limit-container .section.radio-section {
     padding: 0rem 0 6rem 0;
     @include mq(mobile) {
