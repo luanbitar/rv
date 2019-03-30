@@ -5,7 +5,7 @@ import local from './ColorBody.scss'
 import ColorSelect from './ColorSelect/ColorSelect'
 import ColorEnhancer from 'enhancers/Color'
 import { dots } from 'utils/images'
-import { isIncluded } from 'utils/numeral'
+import { currency } from 'utils/numeral'
 import Loader from 'components/Loader/Loader'
 
 const ColorBody = ({ description, colors, carSrc, label, price, selected, selectedColor, isLoadingImage }) => 
@@ -14,7 +14,7 @@ const ColorBody = ({ description, colors, carSrc, label, price, selected, select
       <div className="section car-section">
         {isLoadingImage ? <Loader /> : <img src={carSrc} alt="Car without engine" className="car-image" />}
         <h3 className="color">{label}</h3>
-        <p className="value">{isIncluded(price)}</p>
+        <p className="value">{currency(price)}</p>
       </div>
       <div className="section radio-section">
         <div className="text">

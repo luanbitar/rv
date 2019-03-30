@@ -1,5 +1,7 @@
+import { getItem } from 'utils/localStorage'
+
 export default {
-  selectedEngine: 1,
-  selectedColor: 1,
-  selectedWheels: 1
+  selectedEngine: getItem('selectedEngine') || 1,
+  selectedColor: getItem('selectedColor') || 1,
+  selectedWheels: getItem('selectedWheels') || 1
 }

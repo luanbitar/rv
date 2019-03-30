@@ -6,9 +6,9 @@ import local from './ResultBody.scss'
 import ResultEnhancer from 'enhancers/Result'
 import ButtonRedo from 'components/ButtonRedo/ButtonRedo'
 import Loader from 'components/Loader/Loader'
-import { isIncluded } from 'utils/numeral'
+import { currency } from 'utils/numeral'
 
-const ResultBody = ({ price, engine, color, wheels, total, carSrc, resetSteps, engineSelectedInfo, isLoadingImage }) => 
+const ResultBody = ({ price, enginePrice, colorPrice, colorLabel, wheelsPrice, wheelsLabel, total, carSrc, resetSteps, engineSelectedInfo, isLoadingImage }) => 
   <div className={`${body.container} ${local.container} parent__limit-container`}>
     <div className="limit-container">
       <div className="section car-section">
@@ -20,25 +20,25 @@ const ResultBody = ({ price, engine, color, wheels, total, carSrc, resetSteps, e
         </div>
         <div className="row">
           <p className="label">Starting price</p>
-          <span className="value">{isIncluded(price, false)}</span>
+          <span className="value">{currency(price, false)}</span>
         </div>
         <hr className="spacer" />
         <div className="row">
           <p className="label">{engineSelectedInfo}</p>
-          <span className="value">{isIncluded(engine.price)}</span>
+          <span className="value">{currency(enginePrice)}</span>
         </div>
         <div className="row">
-          <p className="label">{color.label}</p>
-          <span className="value">{isIncluded(color.price)}</span>
+          <p className="label">{colorLabel}</p>
+          <span className="value">{currency(colorPrice)}</span>
         </div>
         <div className="row">
-          <p className="label">{wheels.label}</p>
-          <span className="value">{isIncluded(wheels.price)}</span>
+          <p className="label">{wheelsLabel}</p>
+          <span className="value">{currency(wheelsPrice)}</span>
         </div>
         <hr className="spacer" />
         <div className="row total">
           <p className="label">Final Price</p>
-          <span className="value">{isIncluded(total, false)}</span>
+          <span className="value">{currency(total, false)}</span>
         </div>
         <div className="redo" onClick={() => resetSteps()}>
           <ButtonRedo to="/engine">Rebuild</ButtonRedo>

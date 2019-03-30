@@ -19,14 +19,17 @@ export default compose(
       engine = engines[selectedEngine-1],
       colorSrc = dots[selectedColor-1],
       wheelsSrc = wheelsImages[selectedWheels-1],
-      total = engines[selectedEngine-1].price
-        + colors[selectedColor-1].price
-        + wheels[selectedWheels-1].price
+      kwh = R.prop('kwh', engine),
+      type = R.prop('type', engine),
+      total = R.prop('price', engines[selectedEngine-1])
+        + R.prop('price', colors[selectedColor-1])
+        + R.prop('price', wheels[selectedWheels-1])
         + price
 
     return {
       ...props,
-      engine,
+      kwh,
+      type,
       colorSrc,
       wheelsSrc,
       total

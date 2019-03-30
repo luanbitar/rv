@@ -9,7 +9,7 @@ export default compose(
     const { carData, steps, isLoadingImage } = props,
       engines = R.path(['engine', 'items'], carData),
       selectedEngine = R.prop('selectedEngine', steps),
-      engineSrc = engines[selectedEngine-1].image
+      engineSrc = R.prop('image', engines[selectedEngine-1])
 
     return {
       ...props,

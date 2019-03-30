@@ -1,7 +1,7 @@
 import { compose, applyMiddleware } from 'redux'
 
-import totalMiddleware from 'middlewares/total'
+import localStorage from 'middlewares/localStorage'
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
-export default composeEnhancer(applyMiddleware(totalMiddleware))
+export default composeEnhancer(applyMiddleware(localStorage))

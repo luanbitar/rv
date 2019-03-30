@@ -19,16 +19,26 @@ export default compose(
       color = colors[selectedColor-1],
       wheels = wheelsItems[selectedWheels-1],
       carSrc = R.prop('image', results[selectedColor-1]),
-      engineSelectedInfo = `${engine.kwh} ${engine.type} - ${engine.kwh} kWh - ${engine.range} miles range`,
-      total = price + engine.price + color.price + wheels.price
+      kwh = R.prop('kwh', engine),
+      type = R.prop('type', engine),
+      range = R.prop('range', engine),
+      enginePrice = R.prop('price', engine),
+      colorPrice = R.prop('price', color),
+      colorLabel = R.prop('label', color),
+      wheelsPrice = R.prop('price', wheels),
+      wheelsLabel = R.prop('label', wheels),
+      engineSelectedInfo = `${kwh} ${type} - ${kwh} kWh - ${range} miles range`,
+      total = price + enginePrice + colorPrice + wheelsPrice
 
     return {
       ...props,
       total,
-      engine,
       carSrc,
-      color,
-      wheels,
+      enginePrice,
+      colorPrice,
+      colorLabel,
+      wheelsPrice,
+      wheelsLabel,
       price,
       engineSelectedInfo
     }

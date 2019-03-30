@@ -1,4 +1,6 @@
-export default {
+import { getItem } from 'utils/localStorage'
+
+export default getItem('carData') || {
   price: 0,
   engine: {
     items: [

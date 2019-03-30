@@ -11,7 +11,7 @@ export default compose(
       colors = R.path(['color', 'items'], carData),
       selectedColor = R.prop('selectedColor', steps),
       currentColor = colors[selectedColor-1],
-      carSrc = colors[selectedColor-1].image,
+      carSrc = R.prop('image', colors[selectedColor-1]),
       label = R.prop('label', currentColor)
     let price = R.prop('price', currentColor)
 
