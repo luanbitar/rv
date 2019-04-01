@@ -17,7 +17,7 @@ npm i && npm start
 
 ### Description
 
-I did not used the BEM CSS methodology, because I took advantage of `:local()` use, which provides classes generated with hashes, making available scoped styles. When a whatched [this talk](https://www.youtube.com/watch?v=DTI5ojWBrW0&t=19965s) about [recompose](https://github.com/acdlite/recompose), presented by Milson Junior, I started to learning and use this approach with 5 layers of logic, which had very positive return in terms of code structure, readability and maintenance.
+I did not used the BEM CSS methodology, because I took advantage of `:local()` use, which provides classes generated with hashes, making available scoped styles. When a watched [this talk](https://www.youtube.com/watch?v=DTI5ojWBrW0&t=19965s) about [recompose](https://github.com/acdlite/recompose), presented by Milson Junior, I started to learning and use this approach with 5 layers of logic, which had very positive return in terms of code structure, readability and maintenance.
 
 http://bit.ly/palestra-react-arquitetura-brjs18
 
